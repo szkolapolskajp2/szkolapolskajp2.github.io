@@ -39,62 +39,121 @@
         <input type="text" v-model="haslo" />
       </label>
       <button @click="fetchClass()">Submit</button>
-      <table class="school-table" v-if="data">
-        <thead>
-          <tr>
-            <th>Uczen</th>
-            <th>Rodzic</th>
-            <th>tel Rodzica</th>
-            <th>email Rodzica</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            :class="parent.classMother && 'classMother'"
-            v-for="parent in data.parents"
-          >
-            <td>{{parent.studentName}}</td>
-            <td>{{parent.parentName}}</td>
-            <td :class="parent.parentNum && 'cp-able'"  @click="copyToClipboard(parent.parentNum)">{{parent.parentNum}}</td>
-            <td :class="parent.parentEmail && 'cp-able'"  @click="copyToClipboard(parent.parentEmail)">{{parent.parentEmail}}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="cp-able" @click="copyToClipboard(data.parents.map(p => p.parentEmail).filter(a=>a).join(';'))">Email do wszystkich</td>
-          </tr>
-        </tbody>
-      </table>
+      <div v-if="data">
+        <table class="school-table">
+          <thead>
+            <tr>
+              <th>Uczen</th>
+              <th>Rodzic</th>
+              <th>tel Rodzica</th>
+              <th>email Rodzica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              :class="parent.classMother && 'classMother'"
+              v-for="parent in data.parents"
+            >
+              <td>{{parent.studentName}}</td>
+              <td>{{parent.parentName}}</td>
+              <td
+                :class="parent.parentNum && 'cp-able'"
+                @click="copyToClipboard(parent.parentNum)"
+              >
+                {{parent.parentNum}}
+              </td>
+              <td
+                :class="parent.parentEmail && 'cp-able'"
+                @click="copyToClipboard(parent.parentEmail)"
+              >
+                {{parent.parentEmail}}
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td
+                class="cp-able"
+                @click="copyToClipboard(data.parents.map(p => p.parentEmail).filter(a=>a).join(';'))"
+              >
+                Email do wszystkich
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div v-if="data"><b>Rodzice Klas:<b/></div>
+        <div><b>Rodzice Klas:</b></div>
 
-      <table class="school-table" v-if="data">
-        <thead>
-          <tr>
-            <th>klasa</th>
-            <th>Rodzic</th>
-            <th>tel Rodzica</th>
-            <th>email Rodzica</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="parent in data.classMothers">
-            <td>{{parent.grade}}</td>
-            <td>{{parent.parentName}}</td>
-            <td :class="parent.parentNum && 'cp-able'"  @click="copyToClipboard(parent.parentNum)">{{parent.parentNum}}</td>
-            <td :class="parent.parentEmail && 'cp-able'"  @click="copyToClipboard(parent.parentEmail)">{{parent.parentEmail}}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="cp-able" @click="copyToClipboard(data.classMothers.map(p => p.parentEmail).filter(a=>a).join(';'))">Email do wszystkich</td>
-          </tr>
-        </tbody>
+        <table class="school-table">
+          <thead>
+            <tr>
+              <th>klasa</th>
+              <th>Rodzic</th>
+              <th>tel Rodzica</th>
+              <th>email Rodzica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="parent in data.classMothers">
+              <td>{{parent.grade}}</td>
+              <td>{{parent.parentName}}</td>
+              <td
+                :class="parent.parentNum && 'cp-able'"
+                @click="copyToClipboard(parent.parentNum)"
+              >
+                {{parent.parentNum}}
+              </td>
+              <td
+                :class="parent.parentEmail && 'cp-able'"
+                @click="copyToClipboard(parent.parentEmail)"
+              >
+                {{parent.parentEmail}}
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td
+                class="cp-able"
+                @click="copyToClipboard(data.classMothers.map(p => p.parentEmail).filter(a=>a).join(';'))"
+              >
+                Email do wszystkich
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
+        <div><b>Dyrektorzy:</b></div>
 
-      </table>
+        <table class="school-table">
+          <thead>
+            <tr>
+              <th>Imię</th>
+              <th>tel</th>
+              <th>email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="director in data.directors">
+              <td>{{director.name}}</td>
+              <td
+                :class="director.number && 'cp-able'"
+                @click="copyToClipboard(director.number)"
+              >
+                {{director.number}}
+              </td>
+              <td
+                :class="director.email && 'cp-able'"
+                @click="copyToClipboard(director.email)"
+              >
+                {{director.email}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>

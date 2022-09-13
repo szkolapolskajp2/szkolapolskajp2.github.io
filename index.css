@@ -1,5 +1,5 @@
 #app {
-  width:50%;
+  width:100%;
   margin: auto;
   font-size: 32px;
 }
@@ -18,7 +18,7 @@ input {
   border: solid 1px #ddeeee;
   border-collapse: collapse;
   border-spacing: 0;
-  font: normal 13px Arial, sans-serif;
+  font: normal 1.5rem Arial, sans-serif;
 }
 
 tr.classMother td {
@@ -26,10 +26,9 @@ tr.classMother td {
 }
 
 .school-table tbody td {
-  font-size: 20px;
   border: solid 1px #ddeeee;
   color: #333;
-  padding: 10px;
+  padding: 18px;
   text-shadow: 1px 1px 1px #fff;
 }
 
@@ -43,7 +42,8 @@ tr.classMother td {
 }
 .cp-able:active {
   top: calc(50% - 1.3rem);
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
 #toaster {
@@ -61,7 +61,7 @@ tr.classMother td {
 }
 
 #toaster .toast {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: Bold;
   padding: 6px 18px;
   background-color: rgba(95, 180, 70, 0.8);
