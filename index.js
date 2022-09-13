@@ -42,25 +42,36 @@ const app = Vue.createApp({
     },
     copyToClipboard(str) {
       if (!str) return;
-      let fakeElem = document.createElement('textarea');
-      fakeElem.style.fontSize = '12pt';
-      fakeElem.style.border = '0';
-      fakeElem.style.padding = '0';
-      fakeElem.style.margin = '0';
-      fakeElem.style.position = 'absolute';
-      fakeElem.style['left'] = '-9999px';
-      fakeElem.style.top = (window.pageYOffset || document.documentElement.scrollTop) + 'px';
-      fakeElem.setAttribute('readonly', '');
+      let fakeElem = document.createElement("textarea");
+      fakeElem.style.fontSize = "12pt";
+      fakeElem.style.border = "0";
+      fakeElem.style.padding = "0";
+      fakeElem.style.margin = "0";
+      fakeElem.style.position = "absolute";
+      fakeElem.style["left"] = "-9999px";
+      fakeElem.style.top =
+        (window.pageYOffset || document.documentElement.scrollTop) + "px";
+      fakeElem.setAttribute("readonly", "");
       fakeElem.value = str;
       document.body.appendChild(fakeElem);
       fakeElem.select();
       try {
-        document.execCommand('copy');
+        document.execCommand("copy");
+        postToast();
       } catch (err) {}
 
       document.body.removeChild(fakeElem);
-    }
+    },
   },
 });
 
 app.mount("#app");
+
+var postToast = () => {
+  const Toaster = document.getElementById("toaster");
+  const toast = document.createElement("li");
+  toast.classList.add("toast");
+  toast.innerHTML = "Copied!";
+  Toaster.append(toast);
+  setTimeout(() => Toaster.removeChild(toast), 700);
+};

@@ -9,7 +9,7 @@ const encryptWithAES = (text, passphrase) =>
 const encrypted = {};
 const parsed = {
   classMothers: [],
-  "-ps-": [],
+  "ps": [],
   0: [],
   1: [],
   2: [],
@@ -42,7 +42,7 @@ for (const [grade, password] of Object.entries(passwords)) {
   encrypted[grade] = encryptWithAES(
     JSON.stringify({
       parents: parsed[grade].sort((a, b) => a.studentName.localeCompare(b.studentName)),
-      classMothers: parsed.classMothers.sort((a, b) => a.grade.localeCompare(b.grade)),
+      classMothers: parsed.classMothers.sort((a, b) => Number(a.grade) - Number(b.grade)),
     }),
     password
   );

@@ -14,11 +14,12 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <ul id="toaster"></ul>
     <div id="app">
       <label>
         Klasa
         <select v-model="klasa" @change="onClassChange()">
-          <option value="-ps-">przedszkole</option>
+          <option value="ps">przedszkole</option>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
