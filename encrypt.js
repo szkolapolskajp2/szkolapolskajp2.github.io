@@ -26,6 +26,7 @@ const parsed = {
 };
 
 for (const line of data) {
+  if (!line.trim()) continue;
   const [grade, ...rest] = line.split("|").map((a) => a.trim());
   if (grade) {
     const el = {
