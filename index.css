@@ -18,11 +18,10 @@ input {
 
 .school-table {
   white-space: nowrap;
-  margin: 15px;
   border: solid 1px #ddeeee;
   border-collapse: collapse;
   border-spacing: 0;
-  font: normal 1.8rem Arial, sans-serif;
+  font: normal .8rem Arial, sans-serif;
 }
 
 tr.classMother td {
@@ -32,7 +31,7 @@ tr.classMother td {
 .school-table tbody td {
   border: solid 1px #ddeeee;
   color: #333;
-  padding: 1.5rem 1.3rem;
+  padding: .8rem .4rem;
   text-shadow: 1px 1px 1px #fff;
 }
 
