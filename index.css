@@ -35,6 +35,15 @@ tr.classMother td {
   text-shadow: 1px 1px 1px #fff;
 }
 
+.school-table tbody td.studentName {
+  padding: .8rem .1rem;
+  font: normal .6rem Arial, sans-serif;
+}
+.school-table tbody td.parentName {
+  padding: .8rem .1rem;
+}
+
+
 @media only screen and (min-width: 1000px) {
   .school-table {
     font: normal 1.4rem Arial, sans-serif;

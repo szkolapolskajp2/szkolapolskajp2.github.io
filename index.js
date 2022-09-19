@@ -14,10 +14,12 @@ const decrypt = (text, passphrase) =>
 
 const app = Vue.createApp({
   data() {
+    const lastSelected = localStorage.getItem('lastSelected');
     return {
-      klasa: "",
-      haslo: "",
+      klasa: lastSelected || '',
+      haslo: localStorage.getItem(lastSelected) || '',
       data: null,
+      dupKidNames: [],
     };
   },
   methods: {
@@ -29,8 +31,11 @@ const app = Vue.createApp({
 
       try {
         this.data = JSON.parse(decrypt(res[this.klasa], this.haslo));
+        this.dupKidNames = this.data.parents.map(a => a.studentName).filter((e, i, a) => a.indexOf(e) !== i)
+        console.log(this.dupKidNames)
         localStorage.setItem(this.klasa, this.haslo);
-        console.log(JSON.parse(decrypt(res[this.klasa], this.haslo)));
+        localStorage.setItem('lastSelected', this.klasa);
+        // console.log(JSON.parse(decrypt(res[this.klasa], this.haslo)));
       } catch (e) {
         console.error("zle haslo", e);
         this.data = null;
@@ -40,6 +45,12 @@ const app = Vue.createApp({
       this.haslo = localStorage.getItem(this.klasa);
       this.fetchClass();
     },
+
+    copyArrayToClipboard(arr) {
+      const filtered = arr.map(p => p.parentEmail).filter( (a, index, self) => (a && self.indexOf(a) === index) );
+      this.copyToClipboard(filtered.join(';'));
+    },
+
     copyToClipboard(str) {
       if (!str) return;
       let fakeElem = document.createElement("textarea");
@@ -65,7 +76,7 @@ const app = Vue.createApp({
   },
 });
 
-app.mount("#app");
+app.mount("#app").fetchClass();
 
 var postToast = () => {
   const Toaster = document.getElementById("toaster");

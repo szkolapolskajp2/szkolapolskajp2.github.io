@@ -20,7 +20,7 @@
       <label>
         Klasa
         <select v-model="klasa" @change="onClassChange()">
-          <option value="ps">przedszkole</option>
+          <option value="-1">przedszkole</option>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -55,8 +55,8 @@
               :class="parent.classMother && 'classMother'"
               v-for="parent in data.parents"
             >
-              <td>{{parent.studentName}}</td>
-              <td>{{parent.parentName}}</td>
+              <td class='studentName'>{{parent.studentName}}{{this.dupKidNames.includes(parent.studentName) ? ` ${parent.studentLastInitial}.` : ''}}</td>
+              <td class='parentName'>{{parent.parentName}}</td>
               <td
                 :class="parent.parentNum && 'cp-able'"
                 @click="copyToClipboard(parent.parentNum)"
@@ -76,7 +76,7 @@
               <td></td>
               <td
                 class="cp-able"
-                @click="copyToClipboard(data.parents.map(p => p.parentEmail).filter(a=>a).join(';'))"
+                @click="copyArrayToClipboard(data.parents)"
               >
                 Email do wszystkich
               </td>
@@ -118,7 +118,7 @@
               <td></td>
               <td
                 class="cp-able"
-                @click="copyToClipboard(data.classMothers.map(p => p.parentEmail).filter(a=>a).join(';'))"
+                @click="copyArrayToClipboard(data.classMothers)"
               >
                 Email do wszystkich
               </td>

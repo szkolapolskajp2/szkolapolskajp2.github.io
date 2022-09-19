@@ -10,7 +10,7 @@ const encrypted = {};
 const parsed = {
   classMothers: [],
   directors: [],
-  ps: [],
+  "-1": [],
   0: [],
   1: [],
   2: [],
@@ -27,23 +27,24 @@ const parsed = {
 
 for (const line of data) {
   if (!line.trim()) continue;
-  const [grade, ...rest] = line.split("|").map((a) => a.trim());
-  if (grade) {
+  const [grade, ...rest] = line.split("\t").map((a) => a.trim());
+  if (parsed[grade]) {
     const el = {
       grade,
       studentName: rest[0],
-      parentName: rest[1],
-      parentNum: rest[2],
-      parentEmail: rest[3],
-      classMother: rest[4] === "t",
+      studentLastInitial: rest[1][0] || "",
+      parentName: rest[3],
+      parentNum: rest[5],
+      parentEmail: rest[6],
+      classMother: rest[10] === "t",
     };
     parsed[grade].push(el);
     el.classMother && parsed.classMothers.push(el);
   } else {
     parsed.directors.push({
-      name: rest[1],
-      number: rest[2],
-      email: rest[3],
+      name: [rest[3], rest[4]].join(" "),
+      number: rest[5],
+      email: rest[6],
     });
   }
 }
