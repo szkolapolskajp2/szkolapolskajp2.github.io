@@ -1,0 +1,86 @@
+{
+  "zarzad": [
+    { "imie": "Hanna Czuma",
+      "pozycja": "DYREKTOR SZKOLY"
+    },
+    { "imie": "Bogumila Lubecka",
+      "pozycja": "Rada Dyrektorów"
+    },
+    { "imie": "Malgorzata Mogielnicki",
+      "pozycja": "Rada Dyrektorów"
+    },
+    { "imie": "Anna Jozwiak",
+      "pozycja": "Komisja Rewizyjna"
+    },
+    { "imie": "Mariusz Hacia",
+      "pozycja": "Komisja Rewizyjna",
+      "m": true
+    },
+    {
+      "imie": "Konrad Dudziak",
+      "pozycja": "Komitet Rodzicielski",
+      "m": true
+    },
+    { "imie": "Bogumila Lubecka",
+      "pozycja": "Sekretarz Finansowy"
+    }
+  ],
+  "nauczyciele": [
+    {
+      "imie": "Krystyna Lapinski",
+      "klasa": "przedszkole"
+    },
+    {
+      "imie": "Wioletta Milewska",
+      "klasa": "zerówka"
+    },
+    {
+      "imie": "Edyta Bierdziewski",
+      "klasa": "klasa I"
+    },
+    {
+      "imie": "Beata Podobinski",
+      "klasa": "klasa II"
+    },
+    {
+      "imie": "Maryna Cruz",
+      "klasa": "klasa III"
+    },
+    {
+      "imie": "Katarzyna Milewski",
+      "klasa": "klasa IV"
+    },
+    {
+      "imie": "Barbara Tutka",
+      "klasa": "klasa V"
+    },
+    {
+      "imie": "Anna Goluszka",
+      "klasa": "klasa VI"
+    },
+    {
+      "imie": "Ewa Wielgolaski",
+      "klasa": "klasa VII"
+    },
+    {
+      "imie": "Agnieszka Nowak",
+      "klasa": "klasa VIII"
+    },
+    {
+      "imie": "Jolanta Kuklis",
+      "klasa": "klasa IX"
+    },
+    {
+      "imie": "Joanna Kaczorek",
+      "klasa": "klasa X"
+    },
+    {
+      "imie": "Ula Kuban-Bajek",
+      "klasa": "klasa X"
+    },
+    {
+      "imie": "Magdalena Bialek",
+      "klasa": "klasa XI Maturalna"
+    }
+  ]
+}

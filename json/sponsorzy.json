@@ -1,0 +1,47 @@
+[
+  {
+    "img": "img/sponsorzy/psfcu.jpg",
+    "url": "https://psfcu.com",
+    "imie": "Polsko–Słowiańska Federalna Unia Kredytowa"
+  },
+  {
+    "img": "img/sponsorzy/wedzonka.jpg",
+    "url": "http://poconowedzonka.com/",
+    "imie": "Wędzonka"
+  },
+  {
+    "img": "img/sponsorzy/white-tatra.jpeg",
+    "url": "http://www.tatradelipa.com/",
+    "imie": "Tatra Deli"
+  },
+  {
+    "img": "img/sponsorzy/dymski-pierogi.png",
+    "url": "https://dymskipierogies.com",
+    "imie": "Dymski Pierogi"
+  },
+  {
+    "img": "img/sponsorzy/karkus.jpg",
+    "url": "https://krakusdelipa.com/",
+    "imie": "Krakus Deli"
+  },
+  {
+    "img": "img/sponsorzy/biedronka.jpg",
+    "url": "https://www.facebook.com/BiedronkaPoconos/",
+    "imie": "Biedronka-Poconos"
+  },
+  {
+    "img": "img/sponsorzy/polish-delights.jpg",
+    "url": "https://www.facebook.com/PolishDelightPA/",
+    "imie": "Polish Delights"
+  },
+  {
+    "img": "img/sponsorzy/poconoski.jpg",
+    "url": "https://poconoski.org/",
+    "imie": "Poconoski"
+  },
+  {
+    "img": "img/sponsorzy/poconosproperties.png",
+    "url": "https://www.mypoconosproperties.com/po-polsku",
+    "imie": "Pocono Properties Real Eastate"
+  }
+]

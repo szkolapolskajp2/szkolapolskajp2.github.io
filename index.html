@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Polska Szkola - im. Jana Pawła II</title>
+        <!-- Favicon -->
+        <link href="img/polska-flaga.ico" rel="icon" />
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+        <!-- Flaticon Font -->
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+        <link href="lib/lightbox/lightbox.min.css" rel="stylesheet" />
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- Navbar Start -->
+        <div class="container-fluid bg-light position-relative shadow" style="overflow:hidden">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+                <a href="/" class="navbar-brand font-weight-bold text-secondary" style="font-size: 30px;">
+                    <img style="width: 30px;" src="img/polska-flaga.ico" alt="flag" />
+                    <span class="text-primary">Szkola Polska im. Jana Pawła II w East Stroudsburg, PA</span>
+                </a>
+                <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse justify-content-between">
+                    <div class="navbar-nav font-weight-bold mx-auto py-0">
+                        <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
+                        <a onclick="document.getElementById('ABOUT').scrollIntoView({behavior:'smooth'});" class="nav-item nav-link">O Nas</a>
+                        <a onclick="document.getElementById('TEAM').scrollIntoView({behavior:'smooth'});" class="nav-item nav-link">Zarząd i Kadra</a>
+                        <a href="gallery.html" class="nav-item nav-link">Galeria</a>
+                        <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div> -->
+                        <a onclick="document.getElementById('CONTACT').scrollIntoView({behavior:'smooth'});" class="nav-item nav-link">Kontakt</a>
+                    </div>
+                    <a onclick="document.getElementById('REGISTRATION').scrollIntoView({behavior:'smooth'})" class="btn btn-primary px-4">Rejestracja</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+            <div class="row align-items-center px-3">
+                <div class="col-lg-7 text-center text-lg-left">
+                  <div class="mb-4 mt-4">
+                    <h1 class="text-white mb-4 mt-1">"Gdy dooko<em>ł</em>a mówi<em>ą</em> j<em>ę</em>zykami, d<em>ź</em>wi<em>ę</em>czy po<em>ś</em>ród nich jeden, nasz w<em>ł</em>asny i staje si<em>ę</em> dachem domu, w którym jeste<em>ś</em>my razem"</h1>
+                    <h3 class="text-white mb-4 mt-5 mt-lg-0">- Jan Pawe<em>ł</em> II</h3>
+                    <a class="btn btn-secondary mt-1 py-3 px-5"  target="_blank"  href="pdf/kalendarz_2022.pdf">Kalendarz</a>
+                    <a class="btn btn-secondary mt-1 py-3 px-5"  target="_blank"  href="pdf/regulamin.pdf">Regulamin Ucznia</a>
+                    <a onclick="document.getElementById('REGISTRATION').scrollIntoView({behavior:'smooth'})" class="btn btn-secondary mt-1 py-3 px-5">Rejestracja</a>
+                  </div>
+                    <div class="mt-5 pt-5">
+                      <h5 class="text-white">Prosimy o wsparcie naszej&nbsp;szkoły</h5>
+                      <a class="btn btn-primary" href="https://greatnonprofits.org/org/john-paul-ii-polish-school-of-the-poconos-inc" style="background: #2d81c5 url('https://d1iczxrky3cnb2.cloudfront.net/red_logo.png') no-repeat 20% center; color: #fff; text-decoration: none; font-family: Verdana,sans-serif; font-size: 16px; padding: 15px 48px 15px 85px;">
+                        Złóż Donację
+                      </a>
+                      <br/>
+                      <small class="text-white">Wszystkie darowizny dla naszej organizacji można odpisać od podatku na podstawie IRS Code 501(c)(3)</small>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center text-lg-right">
+                    <img class="img-fluid mt-5 mb-5" src="img/JP2.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Facilities Start -->
+        <div id="ABOUT" class="container-fluid pt-5">
+            <div class="container pb-3">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <i class="flaticon-029-clock h1 font-weight-normal text-primary mb-3"></i>
+                            <div class="pl-4">
+                                <h4>Zajecia</h4>
+                                <p class="m-0">w Soboty 9:30am - 1:30pm (religia 1:30-2:30) od&nbsp;Września&nbsp;do&nbsp;Czerwca</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
+                            <div class="pl-4">
+                                <h4>Klasy</h4>
+                                <p class="m-0">od Przedszkola(3 lata) do klasy VIII szkola podstawowa; klasy licealne od IX do XI (maturalna)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <i class="flaticon-016-apple h1 font-weight-normal text-primary mb-3"></i>
+                            <div class="pl-4">
+                                <h4>W programie</h4>
+                                <p class="m-0">Język Polski, historia i geografia Polska, religia oraz tradycje i obyczaje Polskie</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="col-lg-4 col-md-6 pb-1">
+                      <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                          <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
+                          <div class="pl-4">
+                              <h4>Safe Transportation</h4>
+                              <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                          </div>
+                      </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+        <!-- Facilities Start -->
+
+        <!-- About Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <img class="img-fluid rounded mb-5 mb-lg-0" src="img/szkola-polska-jp2.jpg" alt="" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="section-title pr-5"><span class="pr-2">O Nas</span></p>
+                        <h1 class="mb-4">Polska szkoła dla naszych dzieci</h1>
+                        <p>
+                            Uczniami szkoly sa dzieci z rodzin polskich lub pragnace uczyć sie jezyka polskiego od 3 roku zycia (przedszkole) do klasy ósmej wlacznie. Mlodziezy proponujemy 3-letni program licealny zakonczony matura
+                            polonijna oraz przygotowanie do egzaminu z jezyka polskiego LOTE.
+                        </p>
+                        <p>
+                            Program nauczania obejmuje nauke i doskonalenie jezyka polskiego, historie i geografie Polski, pielegnowanie polskich tradycji , obyczajów i kultury. Obchodzimy wspólnie rocznice i swieta (Jaselka,Nasza
+                            Kraftoteka), wyjezdzamy na wycieczki, by poznawac kraj, w którym zyjemy, jego piekno, bogactwo i kulture. Jezdzimy na przedstawienia teatralne, rewie, bawimy sie na zabawach szkolnych
+                            (Andrzejki,Ostatki,choinka,karnawal).Uczestniczymy w paradach organizowanych w PA i NY. Bierzemy udzial w konkursach tematycznych organizowanych przez Centrale Polskich Szkól lub wewnetrznych, szkolnych.
+                        </p>
+
+                        <p>Szkola nalezy do Centrali Polskich Szkól Dokszalcajacych i wspólpracuje z Komisja Oswiatowa Kongresu Polonii Amerykanskiej.</p>
+                        <!-- <div class="row pt-2 pb-4">
+                            <div class="col-6 col-md-4">
+                                <img class="img-fluid rounded" src="img/parada.jpg" alt="" />
+                            </div>
+                            <div class="col-6 col-md-8">
+                                <ul class="list-inline m-0">
+                                    <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
+                                    <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
+                                    <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Registration Start -->
+        <div id="REGISTRATION" class="container-fluid py-5">
+            <div class="container">
+                <p class="section-title pr-5"><span class="pr-2">Rejestracja</span></p>
+                <h1 class="mb-4">Prosz<em>ę</em> wype<em>ł</em>ni<em>ć</em> formularz i wydrukowa<em>ć</em></h1>
+                <div class="row align-items-center">
+                    <!-- <div class="col-lg-3 mb-5 mb-lg-0">
+                        <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
+                        <ul class="list-inline m-0">
+                            <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Labore eos amet dolor amet diam</li>
+                            <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor amet ipsum</li>
+                            <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                        </ul>
+                    </div> -->
+                    <div class="col-lg-12">
+                        <div class="card border-0">
+                            <div class="card-header bg-secondary text-center p-4">
+                                <h1 class="text-white m-0">Rejestracja</h1>
+                            </div>
+                            <div class="card-body rounded-bottom bg-primary p-5 text-center">
+                              <!-- <button id="open-form" onclick="this.parentElement.classList.add('open')" class="btn btn-secondary mt-1 py-3 px-5">Otwórz</button> -->
+                              <button class="btn btn-secondary mt-1 py-3 px-5">Rejestracja na rok 2023-2024 się otwiera w Sierpniu</button>
+                                <form id="register-form" onsubmit="submitAndPrint(this); return false;" class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <i>Imię dziecka</i>
+                                            <input name="firstName" type="text" class="form-control border-0 p-4" placeholder="Imię" required="required"  tabindex="1"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Klasa w szkole Amerykanskiej</i>
+                                            <input name="ASchoolGrade" type="text" class="form-control border-0 p-4" placeholder="--" required="required"  tabindex="4"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="Address" type="text" class="form-control border-0 p-4" placeholder="Adres" required="required" tabindex="7"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Imię rodzica</i>
+                                            <input name="parent1Name" type="text" class="form-control border-0 p-4" placeholder="Imię" required="required" tabindex="10"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="parent1Tel" type="tel" class="form-control border-0 p-4" placeholder="Telefon" required="required" tabindex="13"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Imię rodzica</i>
+                                            <input name="parent2Name" type="text" class="form-control border-0 p-4" placeholder="Imię" tabindex="16"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="parent2Tel" type="tel" class="form-control border-0 p-4" placeholder="Telefon" tabindex="19"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <i>Nazwisko dziecka</i>
+                                            <input name="lastName" type="text" class="form-control border-0 p-4" placeholder="Nazwisko" required="required"  tabindex="2"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>klasa w szkole Polskiej</i>
+                                            <select name="PSchoolGrade" class="custom-select border-0 px-4" style="height: 47px;" tabindex="5">
+                                                <option selected>--</option>
+                                                <option value="ps">przedszkole</option>
+                                                <option value="0">zerowka</option>
+                                                <option value="1">klasa I</option>
+                                                <option value="2">klasa II</option>
+                                                <option value="3">klasa III</option>
+                                                <option value="4">klasa IV</option>
+                                                <option value="5">klasa V</option>
+                                                <option value="6">klasa VI</option>
+                                                <option value="7">klasa VII</option>
+                                                <option value="8">klasa VIII</option>
+                                                <option value="9">klasa IX</option>
+                                                <option value="10">klasa X</option>
+                                                <option value="11">klasa XI</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="CityState" type="text" class="form-control border-0 p-4" placeholder="Miasto, Stan" required="required" tabindex="8"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <i>Nazwisko rodzica</i>
+                                            <input name="parent1LastName" type="text" class="form-control border-0 p-4" placeholder="Nazwisko" required="required" tabindex="11"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="parent1Email" type="email" class="form-control border-0 p-4" placeholder="E-mail" required="required" tabindex="14"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Nazwisko rodzica</i>
+                                            <input name="parent2LastName" type="text" class="form-control border-0 p-4" placeholder="Nazwisko" tabindex="17"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="parent2Email" type="email" class="form-control border-0 p-4" placeholder="E-mail" tabindex="20"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <i>Data ur.</i>
+                                            <input name="dob" type="date" class="form-control border-0 p-4" placeholder="Data ur." required="required"  tabindex="3"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Dziecko juz chodzilo do polskiej szkoly</i>
+                                            <select name="attendedAlready" class="custom-select border-0 px-4" style="height: 47px;" tabindex="6">
+                                                <option selected>--</option>
+                                                <option value="tak">Tak</option>
+                                                <option value="nie">Nie</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="zipCode" type="number" class="form-control border-0 p-4" placeholder="Zip kod" required="required" tabindex="9"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Relacja</i>
+                                            <select name="parent1Relation" class="custom-select border-0 px-4" style="height: 47px;" tabindex="12">
+                                                <option value="mama">Mama</option>
+                                                <option value="tata">Tata</option>
+                                                <option value="opiekun">Opiekun</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <div class="form-check" style="padding: 12px">
+                                              <input class="form-check-input" type="radio" name="gk" value="parent1" style="transform: scale(2);" checked tabindex="15">
+                                              <label class="form-check-label ml-1" for="flexRadioDefault1">
+                                                Główny Kontakt
+                                              </label>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <i>Relacja</i>
+                                            <select name="parent2Relation" class="custom-select border-0 px-4" style="height: 47px;" tabindex="18">
+                                                <option value="tata">Tata</option>
+                                                <option value="mama">Mama</option>
+                                                <option value="opiekun">Opiekun</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <div class="form-check" style="padding: 12px">
+                                              <input class="form-check-input" type="radio" name="gk" value="parent2" style="transform: scale(2);" tabindex="21">
+                                              <label class="form-check-label ml-1" for="flexRadioDefault1">
+                                                Główny Kontakt
+                                              </label>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Wydrukuj</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Registration End -->
+
+        <!-- Team Start -->
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="text-center pb-2">
+                    <p class="section-title px-5"><span class="px-2">Nasi Sponsorzy</span></p>
+                    <h1 class="mb-4">Prosze podzi<em>ę</em>kowa<em>ć</em> naszym sponsorom!</h1>
+                </div>
+                <div class="row Sponsorzy">
+                    <!-- <div class="col-md-6 col-lg-2 text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                            <img class="img-fluid w-100" src="img/sponsorzy/psfcu.jpg" alt="" />
+                            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="https://psfcu.com" target="_blank"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <i>Polsko–Słowiańska Federalna Unia Kredytowa</i>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Testimonial Start -->
+        <div id="TEAM" class="container-fluid py-5">
+            <div class="container p-0">
+                <div class="text-center pb-2">
+                    <h1 class="mb-4">Zarz<em>ą</em>d i Kadra</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <!-- <div class="testimonial-item px-3">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="img/placeholder-woman.webp" style="width: 70px; height: 70px;" alt="Image">
+                        <div class="pl-3">
+                            <h5>Hanna Czuma</h5>
+                            <i>	DYREKTOR SZKOLY</i>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+                <div class="text-center pb-2">
+                    <p class="section-title px-5"><span class="px-2">Nauczyciele</span></p>
+                </div>
+                <div class="owl-carousel teacher-carousel">
+                    <!-- <div class="testimonial-item px-3">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle" src="img/placeholder-woman.webp" style="width: 70px; height: 70px;" alt="Image" />
+                            <div class="pl-3">
+                                <h5>Krystyna Lapinski</h5>
+                                <i>przedszkole</i>
+                            </div>
+                        </div>
+                      -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Footer Start -->
+        <div id="CONTACT" class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <span style="font-size: 40px; line-height: 40px;">
+                        <span class="text-white">Szkoła Polska JP2</span>
+                    </span>
+                    <p>Wysoko wykwalifikowani, doswiadczeni w zakresie szkolnictwa polonijnego nauczyciele, którzy ciesza sie zaufaniem i sympatia dzieci i rodziców.</p>
+                    <div class="d-flex justify-content-start mt-4">
+                      <a class="btn btn-outline-primary rounded-circle text-center mr-4 px-0" style="width: 52px; height: 52px; font-size: 30px" href="https://www.facebook.com/polskaszkola.stroudsburg"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary rounded-circle text-center mr-4 px-0" style="width: 52px; height: 52px; font-size: 30px" href="/gallery.html"><i class="fas fa-images"></i></a>
+                        <a class="btn btn-outline-primary rounded-circle text-center mr-4 px-0" style="width: 52px; height: 52px; font-size: 30px" href="https://www.youtube.com/channel/UCvEnMxy9qHsYucBud2TDb5Q"><i class="fab fa-youtube"></i></a>
+                        <!-- <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-10 mb-5">
+                    <div class="ml-5">
+                        <h3 class="text-primary mb-4">Kontakt</h3>
+                        <div class="d-flex">
+                            <div>
+                              <a href="https://goo.gl/maps/N4dKRcTR1ZM75dTo9">
+                                <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                              </a>
+                            </div>
+                            <div class="pl-3">
+                                <h5 class="text-white">Adres</h5>
+                                <p>
+                                    Szkola Katolickiej przy Kosciele Sw. Mateusza<br />
+                                    200 Brodhead Avenue<br />
+                                    East Stroudsburg, PA 18301
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div>
+                              <a href="mailto:szkolapolskajp2poconos@gmail.com">
+                                <h4 class="fa fa-envelope text-primary"></h4>
+                              </a>
+                            </div>
+                            <div class="pl-3">
+                                <h5 class="text-white">Email</h5>
+                                <p>szkolapolskajp2poconos@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                          <div>
+                            <a href="tel:201-214-8335">
+                              <h4 class="fa fa-phone-alt text-primary"></h4>
+                            </a>
+                          </div>
+                            <div class="pl-3">
+                                <h5 class="text-white">Dyrektor Szkoly</h5>
+                                <p>201-214-8335</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h3 class="text-primary mb-4">Newsletter</h3>
+                    <fieldset id="Newsletter">
+                        <div class="form-group">
+                            <input type="email" class="form-control border-0 py-4" placeholder="Twój e-mail" />
+                        </div>
+                        <div>
+                            <button onclick="submitAndDisable()" class="btn btn-primary btn-block border-0 py-3" type="submit">Zapisz się</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, 0.2);">
+                <p class="m-0 text-center text-white">
+                    &copy; <span class="text-primary font-weight-bold" href="#">polskaszkolajp2</span>. All Rights Reserved. Designed by
+                    <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/jquery-qrcode.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="js/register.js"></script>
+        <script src="js/newsletter.js"></script>
+    </body>
+</html>
