@@ -88,7 +88,7 @@ const makeAlbumEl = (
       );
       $(".portfolio-container").append(galleryElements);
 
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 2000));
 
       var portfolioIsotope = $(".portfolio-container").isotope({
         itemSelector: ".portfolio-item",
