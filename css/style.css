@@ -10293,7 +10293,7 @@ em {
   overflow: hidden;
 }
 .open > #register-form {
-  max-height: 100vh;
+  max-height: unset;
 }
 .open > #open-form {
   display: none;
@@ -10311,9 +10311,14 @@ em {
 }
 
 fieldset:disabled {
-  opacity: .5
+  opacity: 0.5;
 }
 
 .portfolio-container .portfolio-btn a {
-  text-shadow: 1px 1px 2px black
+  text-shadow: 1px 1px 2px black;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0px 0px 10px white !important;
 }
