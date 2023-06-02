@@ -17,9 +17,9 @@ JSON.stringify(
 // [title, albumUrl, photoUrl]
 */
 
-var albumBase = "https://photos.google.com/share/";
-var thumbBase = "https://lh3.googleusercontent.com/";
-var suffix = "-p-k-no";
+// var albumBase = "https://photos.google.com/share/";
+// var thumbBase = "https://lh3.googleusercontent.com/";
+var suffix = "=s222-p-k-no";
 
 const sortYears = (a, b) => {
   const numA = a.split("-").reduce((a, b) => Number(a) + Number(b));
@@ -66,40 +66,34 @@ const makeAlbumEl = (
     return false;
   });
 
-  fetch("/json/gallery.json")
-    .then((r) => r.json())
-    .then(async (albums) => {
-      let galleryElements = "";
-      let buttonSet = new Set();
-      for (const [albumName, albumUrl, photoUrl] of albums) {
-        const [years, title] = albumName.split("/");
-        galleryElements += makeAlbumEl(
-          years,
-          title,
-          albumBase + albumUrl,
-          thumbBase + photoUrl + suffix
-        );
-        buttonSet.add(years);
-      }
-      const buttonArray = [...buttonSet].sort(sortYears);
+  Promise.resolve().then(async () => {
+    let galleryElements = "";
+    let buttonSet = new Set();
+    for (let [albumName, albumUrl, photoUrl] of albums) {
+      const [years, title] = albumName.split("/");
+      photoUrl = photoUrl.replace(/=.*$/g, "") + suffix;
+      galleryElements += makeAlbumEl(years, title, albumUrl, photoUrl);
+      buttonSet.add(years);
+    }
+    const buttonArray = [...buttonSet].sort(sortYears);
 
-      $("#portfolio-flters").append(
-        buttonArray.map((year, i) => makeButtonEl(year, i === 0)).join("")
-      );
-      $(".portfolio-container").append(galleryElements);
+    $("#portfolio-flters").append(
+      buttonArray.map((year, i) => makeButtonEl(year, i === 0)).join("")
+    );
+    $(".portfolio-container").append(galleryElements);
 
-      await new Promise((r) => setTimeout(r, 2000));
+    await new Promise((r) => setTimeout(r, 3000));
 
-      var portfolioIsotope = $(".portfolio-container").isotope({
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
-        filter: `.${buttonArray[0]}`,
-      });
-
-      $("#portfolio-flters li").on("click", function () {
-        $("#portfolio-flters li").removeClass("active");
-        $(this).addClass("active");
-        portfolioIsotope.isotope({ filter: $(this).data("filter") });
-      });
+    var portfolioIsotope = $(".portfolio-container").isotope({
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
+      filter: `.${buttonArray[0]}`,
     });
+
+    $("#portfolio-flters li").on("click", function () {
+      $("#portfolio-flters li").removeClass("active");
+      $(this).addClass("active");
+      portfolioIsotope.isotope({ filter: $(this).data("filter") });
+    });
+  });
 })(jQuery);
