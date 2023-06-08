@@ -28,12 +28,14 @@ const getHtml = (
       <div class="form-row">Nazwisko i imię ucznia: <b>${child.lastName}, ${
   child.name
 }</b></div>
-      <div class="form-row">Data i miejsce urodzenia: <b>${child.dob}</b></div>
-      <div class="form-row">Wiek ucznia: <b>${getAge(
-        child.dob
-      )}</b> Klasa w szkole polskiej: <b>${
-  child.klasa
-}</b> w amerykańskiej: <b>${child.class}</b></div>
+      <div class="form-row">Data i miejsce urodzenia: <b>${child.dob} ${
+  child.pob
+}</b></div>
+      <br/>
+      <div class="form-row">Wiek ucznia: <b>${getAge(child.dob)}</b></div>
+      <div class="form-row">Klasa w szkole polskiej: <b>${child.klasa}</b></div>
+      <div class="form-row">Klasa w szkole amerykańskiej: <b>${child.class}</b></div>
+      </br>
       <div class="form-row">Czy dziecko uczęszczało wcześniej do polskiej szkoły?: <b>${
         question.attendedAlready
       }</b></div>
@@ -49,13 +51,23 @@ const getHtml = (
   otherParent.email
 }</b></div>
       <div class="form-row">Adres zamieszkania: <b>${child.address}</b></div>
-      <div class="form-row">Kontakt w razie konieczności: <b>${question.emergencyContact}</b></div>
-      <div class="form-row">Znajomość języka polskiego ucznia: <b>${question.polishLevel}</b></div>
-      <div class="form-row">Dodatkowe informacje o dziecku: <b>${question.additional}</b></div>
-      <div class="form-row">Czy dziecko będzie uczęszczało na zajęcia z religii?: <b>${question.religion}</b></div>
+      <div class="form-row">Kontakt w razie konieczności: <b>${
+        question.emergencyContact
+      }</b></div>
+      <div class="form-row">Znajomość języka polskiego ucznia: <b>${
+        question.polishLevel
+      }</b></div>
+      <div class="form-row">Dodatkowe informacje o dziecku: <b>${
+        question.additional
+      }</b></div>
+      <div class="form-row">Czy dziecko będzie uczęszczało na zajęcia z religii?: <b>${
+        question.religion
+      }</b></div>
       <div class="form-row">
         Wyrażam zgodę na zamieszczanie zdjęć mojego dziecka w mediach szkolnych
-        i innych publikacjach dotyczących szkoły: <b>${question.mediaPermission}</b>
+        i innych publikacjach dotyczących szkoły: <b>${
+          question.mediaPermission
+        }</b>
       </div>
 
       <div class="form-row">Podpis rodziców lub opiekunów</div>
@@ -166,6 +178,7 @@ const submitAndPrint = (form) => {
     name: obj.firstName,
     lastName: obj.lastName,
     dob: obj.dob,
+    pob: obj.pob,
     class: obj.ASchoolGrade,
     klasa: obj.PSchoolGrade,
     address: [obj.Address, obj.CityState, obj.zipCode].join(", "),

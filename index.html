@@ -63,7 +63,7 @@
                     </div>
                     <div class="mt-5 pt-5">
                         <h5 class="text-white">Prosimy o wsparcie naszej&nbsp;szkoły</h5>
-                        <a class="btn btn-primary" href="https://greatnonprofits.org/org/john-paul-ii-polish-school-of-the-poconos-inc" style="background: #2d81c5 url('https://d1iczxrky3cnb2.cloudfront.net/red_logo.png') no-repeat 20% center; color: #fff; text-decoration: none; font-family: Verdana,sans-serif; font-size: 16px; padding: 15px 48px 15px 85px;">
+                        <a class="btn btn-primary" href="https://greatnonprofits.org/org/john-paul-ii-polish-school-of-the-poconos-inc" style="background: #2d81c5 url('/img/gnp_icon.png') no-repeat 20% center; color: #fff; text-decoration: none; font-family: Verdana,sans-serif; font-size: 16px; padding: 15px 48px 15px 85px;">
                         Złóż Donację
                         </a>
                         <br/>
@@ -192,10 +192,16 @@
                                                 <input name="lastName" type="text" class="form-control border-0 p-4" placeholder="Nazwisko" required="required" />
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-2">
                                             <div class="form-group">
                                                 <i>Data ur.</i>
                                                 <input name="dob" type="date" class="form-control border-0 p-4" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <i>Miejsce ur.</i>
+                                                <input name="pob" type="text" class="form-control border-0 p-4" placeholder="miasto,kraj" required="required" />
                                             </div>
                                         </div>
                                     </div>
@@ -326,8 +332,8 @@
                                             <div class="form-group">
                                                 <i>Relacja</i>
                                                 <select name="parent2Relation" class="custom-select border-0 px-4" style="height: 47px;" >
-                                                    <option value="mama">Mama</option>
                                                     <option value="tata">Tata</option>
+                                                    <option value="mama">Mama</option>
                                                     <option value="opiekun">Opiekun</option>
                                                 </select>
                                             </div>

@@ -1,4 +1,4 @@
-// script to extract data from https://photos.google.com/albums
+// old script to extract data from https://photos.google.com/albums
 /**
 JSON.stringify(
   $$("a.MTmRkb").map((el) => [
