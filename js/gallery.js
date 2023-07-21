@@ -17,10 +17,6 @@ JSON.stringify(
 // [title, albumUrl, photoUrl]
 */
 
-// var albumBase = "https://photos.google.com/share/";
-// var thumbBase = "https://lh3.googleusercontent.com/";
-var suffix = "=s222-p-k-no";
-
 const sortYears = (a, b) => {
   const numA = a.split("-").reduce((a, b) => Number(a) + Number(b));
   const numB = b.split("-").reduce((a, b) => Number(a) + Number(b));
@@ -37,7 +33,7 @@ const makeAlbumEl = (
   title,
   href,
   coverUrl
-) => `<div class="col-lg-4 col-md-6 mb-4 portfolio-item ${years}">
+) => `<div class="col-lg-3 col-md-6 mb-4 portfolio-item ${years}">
     <div class="position-relative overflow-hidden mb-2">
         <img class="img-fluid w-100 minh-180" src="${coverUrl}" alt="">
         <div class="portfolio-btn d-flex align-items-center justify-content-center">
@@ -71,7 +67,6 @@ const makeAlbumEl = (
     let buttonSet = new Set();
     for (let [albumName, albumUrl, photoUrl] of albums) {
       const [years, title] = albumName.split("/");
-      photoUrl = photoUrl.replace(/=.*$/g, "") + suffix;
       galleryElements += makeAlbumEl(years, title, albumUrl, photoUrl);
       buttonSet.add(years);
     }
