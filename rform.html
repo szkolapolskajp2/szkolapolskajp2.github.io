@@ -1,82 +1,18 @@
-<body>
-  <style>
-    body {
-      margin: 0;
-      width: 794px;
-    }
-    .form {
-      padding: 30px;
-    }
-    .form-header {
-      text-align: center;
-      margin-left: 40px;
-    }
-    .form-sign {
-      display: flex;
-    }
-    .form-row {
-      margin-bottom: 18px;
-    }
-    .form-qr {
-      position: absolute;
-      top: 40px;
-      left: 30px;
-    }
-  </style>
-  <div class="form">
-    <div class="form-header">
-      <h1>KARTA REJESTRACYJNA</h1>
-      <h2>Szkoła Polska im. Jana Pawła II</h2>
-      <span>200 Broadhead Ave. East Stroudsburg, PA 18301</span>
-      <br />
-      <span>2023-2024</span>
-    </div>
-    <br /><br />
-    <div>
-      <div class="form-row">
-        Nazwisko i imię ucznia: <b>${child.lastName}, ${ child.name }</b>
-      </div>
-      <div class="form-row">Data i miejsce urodzenia: <b>${child.dob}</b></div>
-      <div class="form-row">
-        Wiek ucznia: <b>${getAge( child.dob )}</b> Klasa w szkole polskiej:
-        <b>${ child.klasa }</b> w amerykańskiej: <b>${child.class}</b>
-      </div>
-      <div class="form-row">
-        Czy dziecko uczęszczało wcześniej do polskiej szkoły?:
-        <b>${ question.attendedAlready }</b>
-      </div>
-      <div class="form-row">
-        Imiona rodziców lub opiekunów:
-        <b
-          >${ mainParent.name } ${mainParent.lastName}, ${otherParent.name} ${
-          otherParent.lastName }</b
-        >
-      </div>
-      <div class="form-row">
-        Numery telefonu: <b>${mainParent.phone}, ${ otherParent.phone }</b>
-      </div>
-      <div class="form-row">
-        E-mail: <b>${mainParent.email}, ${ otherParent.email }</b>
-      </div>
-      <div class="form-row">Adres zamieszkania: <b>${child.address}</b></div>
-      <div class="form-row">Kontakt w razie konieczności:</div>
-      <div class="form-row">Znajomość języka polskiego ucznia:</div>
-      <div class="form-row">Dodatkowe informacje o dziecku:</div>
-      <div class="form-row">
-        Czy dziecko będzie uczęszczało na zajęcia z religii?:
-      </div>
-      <div class="form-row">
-        Wyrażam zgodę na zamieszczanie zdjęć mojego dziecka w mediach szkolnych
-        i innych publikacjach dotyczących szkoły:
-      </div>
-
-      <div class="form-row">Podpis rodziców lub opiekunów</div>
-      <br /><br />
-      <div class="form-sign">
-        <span style="flex: 6; border-bottom: 1px dotted black;"></span>
-        <span style="flex: 1; text-align: end;">Data:</span>
-        <span style="flex: 2; border-bottom: 1px dotted black;"></span>
-      </div>
-    </div>
-  </div>
-</body>
+<html>
+  <body>
+    <div id="root"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/register.js"></script>
+    <script type="text/javascript">
+      const hash = window.location.hash.slice(1);
+      const keys = ['firstName', 'lastName', 'dob', 'pob', 'Address', 'CityState', 'zipCode', 'ASchoolGrade', 'PSchoolGrade', 'attendedAlready', 'parent1Name', 'parent1LastName', 'parent1Relation', 'parent1Tel', 'parent1Email', 'gk', 'parent2Name', 'parent2LastName', 'parent2Relation', 'parent2Tel', 'parent2Email', 'polishLevel', 'religion', 'mediaPermission', 'emergencyContact', 'additional']
+      const values = decode64(hash).split("|");
+      const obj = {};
+      for (let i = 0; i < keys.length; i++) {
+        obj[keys[i]] = values[i];
+      }
+      const { child, parent1, parent2, questions } = extractData(obj);
+      $("#root").html(getHtml(child, parent1, parent2, questions, true));
+    </script>
+  </body>
+</html>

@@ -1,91 +1,115 @@
+const stringHash = (str) => {
+  let hash = 0;
+  let chr;
+  for (let i = 0; i < str.length; i++) {
+    chr = str.charCodeAt(i);
+    hash = (hash << 5) - hash + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash.toString("36");
+};
+
 const getAge = (birthDate) =>
   Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10);
 const getHtml = (
   child, // {name, lastName, dob, pob, klasa, class, address},
   mainParent, // {name, lastName, phone, email},
   otherParent, // {name, lastName, phone, email},
-  question // {religion, attendedAlready, polishLevel, mediaPermission, emergencyContact, additional }
+  question, // {religion, attendedAlready, polishLevel, mediaPermission, emergencyContact, additional }
+  tylkoInfo = false
 ) => `
-<body>
-  <style>
-    body {margin: 0;width: 794px;}
-    .form {padding: 30px;}
-    .form-header {text-align: center; margin-left: 40px}
-    .form-sign {display: flex;}
-    .form-row { margin-bottom: 18px;}
-    .form-qr {position:absolute;top:40px;left:30px;}
-  </style>
-  <div class="form">
-    <div class="form-header">
-      <h1>KARTA REJESTRACYJNA</h1>
-      <h2>Szkoła Polska im. Jana Pawła II</h2>
-      <span>200 Broadhead Ave. East Stroudsburg, PA 18301</span>
-      <br/>
-      <span>2023-2024</span>
-    </div>
-    <br /><br />
-    <div>
-      <div class="form-row">Nazwisko i imię ucznia: <b>${child.lastName}, ${
+<style>
+  body {margin: 0;width: 794px;}
+  .form {padding: 30px;}
+  .form-header {text-align: center; margin: 0 0 10px 60px}
+  .form-sign {display: flex;}
+  .form-row { margin-bottom: 18px;}
+  .form-qr {position:absolute;top:40px;left:30px;}
+</style>
+<div class="form">
+  ${
+    tylkoInfo
+      ? ""
+      : `
+  <div class="form-header">
+    <h1>KARTA REJESTRACYJNA</h1>
+    <h2>Szkoła Polska im. Jana Pawła II</h2>
+    <span>200 Broadhead Ave. East Stroudsburg, PA 18301</span>
+    <br/>
+    <span>2023-2024</span>
+  </div>`
+  }
+  <br /><br />
+  <div>
+    <div class="form-row">Nazwisko i imię ucznia: <b>${child.lastName}, ${
   child.name
 }</b></div>
-      <div class="form-row">Data i miejsce urodzenia: <b>${child.dob} ${
+    <div class="form-row">Data i miejsce urodzenia: <b>${child.dob} ${
   child.pob
 }</b></div>
-      <br/>
-      <div class="form-row">Wiek ucznia: <b>${getAge(child.dob)}</b></div>
-      <div class="form-row">Klasa w szkole polskiej: <b>${child.klasa}</b></div>
-      <div class="form-row">Klasa w szkole amerykańskiej: <b>${child.class}</b></div>
-      </br>
-      <div class="form-row">Czy dziecko uczęszczało wcześniej do polskiej szkoły?: <b>${
-        question.attendedAlready
-      }</b></div>
-      <div class="form-row">Imiona rodziców lub opiekunów: <b>${
-        mainParent.name
-      } ${mainParent.lastName}, ${otherParent.name} ${
+    <br/>
+    <div class="form-row">Wiek ucznia: <b>${getAge(child.dob)}</b></div>
+    <div class="form-row">Klasa w szkole polskiej: <b>${child.klasa}</b></div>
+    <div class="form-row">Klasa w szkole amerykańskiej: <b>${
+      child.class
+    }</b></div>
+    </br>
+    <div class="form-row">Czy dziecko uczęszczało wcześniej do polskiej szkoły?: <b>${
+      question.attendedAlready
+    }</b></div>
+    <div class="form-row">Imiona rodziców lub opiekunów: <b>${
+      mainParent.name
+    } ${mainParent.lastName}, ${otherParent.name} ${
   otherParent.lastName
 }</b></div>
-      <div class="form-row">Numery telefonu: <b>${mainParent.phone}, ${
+    <div class="form-row">Numery telefonu: <b>${mainParent.phone}, ${
   otherParent.phone
 }</b></div>
-      <div class="form-row">E-mail: <b>${mainParent.email}, ${
+    <div class="form-row">E-mail: <b>${mainParent.email}, ${
   otherParent.email
 }</b></div>
-      <div class="form-row">Adres zamieszkania: <b>${child.address}</b></div>
-      <div class="form-row">Kontakt w razie konieczności: <b>${
-        question.emergencyContact
-      }</b></div>
-      <div class="form-row">Znajomość języka polskiego ucznia: <b>${
-        question.polishLevel
-      }</b></div>
-      <div class="form-row">Dodatkowe informacje o dziecku: <b>${
-        question.additional
-      }</b></div>
-      <div class="form-row">Czy dziecko będzie uczęszczało na zajęcia z religii?: <b>${
-        question.religion
-      }</b></div>
-      <div class="form-row">
-        Wyrażam zgodę na zamieszczanie zdjęć mojego dziecka w mediach szkolnych
-        i innych publikacjach dotyczących szkoły: <b>${
-          question.mediaPermission
-        }</b>
-      </div>
-
-      <div class="form-row">Podpis rodziców lub opiekunów</div>
-      <br /><br />
-      <div class="form-sign">
-        <span style="flex: 6; border-bottom: 1px dotted black;"></span>
-        <span style="flex: 1; text-align: end;">Data:</span>
-        <span style="flex: 2; border-bottom: 1px dotted black;"></span>
-      </div>
+    <div class="form-row">Adres zamieszkania: <b>${child.address}</b></div>
+    <div class="form-row">Kontakt w razie konieczności: <b>${
+      question.emergencyContact
+    }</b></div>
+    <div class="form-row">Znajomość języka polskiego ucznia: <b>${
+      question.polishLevel
+    }</b></div>
+    <div class="form-row">Dodatkowe informacje o dziecku: <b>${
+      question.additional
+    }</b></div>
+    <div class="form-row">Czy dziecko będzie uczęszczało na zajęcia z religii?: <b>${
+      question.religion
+    }</b></div>
+    <div class="form-row">
+      Wyrażam zgodę na zamieszczanie zdjęć mojego dziecka w mediach szkolnych
+      i innych publikacjach dotyczących szkoły: <b>${
+        question.mediaPermission
+      }</b>
     </div>
+    ${
+      tylkoInfo
+        ? ""
+        : `
+    <div class="form-row">Podpis rodziców lub opiekunów</div>
+    <br /><br />
+    <div class="form-sign">
+      <span style="flex: 6; border-bottom: 1px dotted black;"></span>
+      <span style="flex: 1; text-align: end;">Data:</span>
+      <span style="flex: 2; border-bottom: 1px dotted black;"></span>
+    </div>`
+    }
   </div>
-</body>
+</div>
 `;
-const submitAndPrint = (form) => {
-  /** submit data here */
 
+const serializeForm = (form) => {
   var arr = $(form).serializeArray();
-  console.log(arr);
+  return arr.reduce((acc, { name, value }) => {
+    acc[name] = value;
+    return acc;
+  }, {});
+  // console.log(arr);
   // [
   //   {
   //     name: "firstName",
@@ -168,12 +192,9 @@ const submitAndPrint = (form) => {
   //     value: "tata",
   //   },
   // ];
+};
 
-  const obj = arr.reduce((acc, { name, value }) => {
-    acc[name] = value;
-    return acc;
-  }, {});
-
+const extractData = (obj) => {
   let child = {
     name: obj.firstName,
     lastName: obj.lastName,
@@ -203,23 +224,38 @@ const submitAndPrint = (form) => {
     mediaPermission: obj.mediaPermission,
     emergencyContact: obj.emergencyContact,
   };
+  return {
+    child,
+    parent1,
+    parent2,
+    questions,
+  };
+};
 
+const submitAndPrint = (form) => {
+  const obj = serializeForm(form);
+  const { child, parent1, parent2, questions } = extractData(obj);
+
+  const base64encoded = encodeString(Object.values(obj).join('|'));
+  const origin = "https://szkolapolskajp2.github.io"; //window.location.origin
+  const path = `/rform?${stringHash(base64encoded)}#${base64encoded}`;
   const div = $(document.createElement("DIV")).qrcode({
-    width: 164,
-    height: 164,
-    text: arr.map((a) => a.value).join(","),
+    width: 180,
+    height: 180,
+    text: origin + path,
   })[0];
   div.className = "form-qr";
 
-  console.log(getHtml(child, parent1, parent2, questions));
-
+  console.log("url: ", origin + path);
   var winPrint = window.open(
-    window.location.origin,
+    origin,
     "DescriptiveWindowName",
     "left=0,top=0,width=800,height=600,toolbar=0,scrollbars=0,status=0"
   );
 
-  winPrint.document.write(getHtml(child, parent1, parent2, questions));
+  winPrint.document.write(
+    `<body>${getHtml(child, parent1, parent2, questions)}<body>`
+  );
   winPrint.document.body.append(div);
   winPrint.document.close();
   winPrint.focus();
@@ -227,3 +263,16 @@ const submitAndPrint = (form) => {
   winPrint.close();
   return false;
 };
+
+
+function encodeString(str) {
+  const bytes = new TextEncoder().encode(str)
+  const binString = Array.from(bytes, (x) => String.fromCodePoint(x)).join("");
+  return btoa(binString);
+}
+
+function decode64(base64) {
+  const binString = atob(base64);
+  const bytes =  Uint8Array.from(binString, (m) => m.codePointAt(0));
+  return new TextDecoder().decode(bytes)
+}
