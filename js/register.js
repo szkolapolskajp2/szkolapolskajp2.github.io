@@ -9,8 +9,14 @@ const stringHash = (str) => {
   return hash.toString("36");
 };
 
-const getAge = (birthDate) =>
-  Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10);
+const getAge = (birthDate) => {
+  // get age on september 1st of current year. rounded to 10ths
+  const date = new Date(`9/1/${new Date().getFullYear()}`);
+  return (
+    Math.round((date.getTime() - new Date(birthDate).getTime()) / 3155673600) /
+    10
+  );
+};
 const getHtml = (
   child, // {name, lastName, dob, pob, klasa, class, address},
   mainParent, // {name, lastName, phone, email},
@@ -236,7 +242,7 @@ const submitAndPrint = (form) => {
   const obj = serializeForm(form);
   const { child, parent1, parent2, questions } = extractData(obj);
 
-  const base64encoded = encodeString(Object.values(obj).join('|'));
+  const base64encoded = encodeString(Object.values(obj).join("|"));
   const origin = "https://szkolapolskajp2.github.io"; //window.location.origin
   const path = `/rform?${stringHash(base64encoded)}#${base64encoded}`;
   const div = $(document.createElement("DIV")).qrcode({
@@ -264,15 +270,14 @@ const submitAndPrint = (form) => {
   return false;
 };
 
-
 function encodeString(str) {
-  const bytes = new TextEncoder().encode(str)
+  const bytes = new TextEncoder().encode(str);
   const binString = Array.from(bytes, (x) => String.fromCodePoint(x)).join("");
   return btoa(binString);
 }
 
 function decode64(base64) {
   const binString = atob(base64);
-  const bytes =  Uint8Array.from(binString, (m) => m.codePointAt(0));
-  return new TextDecoder().decode(bytes)
+  const bytes = Uint8Array.from(binString, (m) => m.codePointAt(0));
+  return new TextDecoder().decode(bytes);
 }
