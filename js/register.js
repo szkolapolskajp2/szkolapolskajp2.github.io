@@ -54,7 +54,7 @@ const getHtml = (
   child.pob
 }</b></div>
     <br/>
-    <div class="form-row">Wiek ucznia: <b>${getAge(child.dob)}</b></div>
+    <div class="form-row">Wiek ucznia we Wrześniu: <b>${getAge(child.dob)}</b></div>
     <div class="form-row">Klasa w szkole polskiej: <b>${child.klasa}</b></div>
     <div class="form-row">Klasa w szkole amerykańskiej: <b>${
       child.class
