@@ -54,7 +54,9 @@ const getHtml = (
   child.pob
 }</b></div>
     <br/>
-    <div class="form-row">Wiek ucznia we Wrześniu: <b>${getAge(child.dob)}</b></div>
+    <div class="form-row">Wiek ucznia we Wrześniu: <b>${getAge(
+      child.dob
+    )}</b></div>
     <div class="form-row">Klasa w szkole polskiej: <b>${child.klasa}</b></div>
     <div class="form-row">Klasa w szkole amerykańskiej: <b>${
       child.class
@@ -253,21 +255,25 @@ const submitAndPrint = (form) => {
   div.className = "form-qr";
 
   console.log("url: ", origin + path);
-  var winPrint = window.open(
-    origin,
-    "DescriptiveWindowName",
-    "left=0,top=0,width=800,height=600,toolbar=0,scrollbars=0,status=0"
-  );
+  if (window.print) {
+    var winPrint = window.open(
+      origin,
+      "DescriptiveWindowName",
+      "left=0,top=0,width=800,height=600,toolbar=0,scrollbars=0,status=0"
+    );
 
-  winPrint.document.write(
-    `<body>${getHtml(child, parent1, parent2, questions)}<body>`
-  );
-  winPrint.document.body.append(div);
-  winPrint.document.close();
-  winPrint.focus();
-  winPrint.print();
-  winPrint.close();
-  return false;
+    winPrint.document.write(
+      `<body>${getHtml(child, parent1, parent2, questions)}<body>`
+    );
+    winPrint.document.body.append(div);
+    winPrint.document.close();
+    winPrint.focus();
+    winPrint.print();
+    winPrint.close();
+    return false;
+  } else {
+    window.location.href = origin + path;
+  }
 };
 
 function encodeString(str) {
