@@ -13,7 +13,9 @@
       }
       const { child, parent1, parent2, questions } = extractData(obj);
       $("#root").html(getHtml(child, parent1, parent2, questions, true));
-      fetch('http://192.168.5.40:3000/', {method: "POST", body: values.join('|')})
+      setTimeout(() => {
+        location.href = location.href.replace('https://szkolapolskajp2.github.io', 'http://192.168.5.40:3000')
+      }, 1000)
     </script>
   </body>
 </html>
