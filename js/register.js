@@ -254,7 +254,8 @@ const submitAndPrint = (form) => {
   })[0];
   div.className = "form-qr";
 
-  console.log("url: ", origin + path);
+  console.log(Object.values(obj).join("|"));
+
   if (window.print) {
     var winPrint = window.open(
       origin,
