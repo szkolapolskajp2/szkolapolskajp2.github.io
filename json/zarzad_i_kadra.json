@@ -1,29 +1,24 @@
 {
   "zarzad": [
-    { "imie": "Hanna Czuma",
-      "pozycja": "DYREKTOR SZKOLY"
-    },
-    { "imie": "Bogumila Lubecka",
-      "pozycja": "Rada Dyrektorów"
-    },
-    { "imie": "Malgorzata Mogielnicki",
-      "pozycja": "Rada Dyrektorów"
-    },
-    { "imie": "Anna Jozwiak",
-      "pozycja": "Komisja Rewizyjna"
-    },
-    { "imie": "Mariusz Hacia",
-      "pozycja": "Komisja Rewizyjna",
-      "m": true
-    },
+    { "imie": "Hanna Czuma", "pozycja": "DYREKTOR SZKOLY" },
+    { "imie": "Bogumila Lubecka", "pozycja": "Rada Dyrektorów" },
+    { "imie": "Magdalena Archacka", "pozycja": "Rada Dyrektorów" },
+    { "imie": "Anna Jozwiak", "pozycja": "Komisja Rewizyjna" },
+    { "imie": "Mariusz Hacia", "pozycja": "Komisja Rewizyjna", "m": true },
     {
       "imie": "Konrad Dudziak",
       "pozycja": "Komitet Rodzicielski",
       "m": true
     },
-    { "imie": "Bogumila Lubecka",
-      "pozycja": "Sekretarz Finansowy"
-    }
+    {
+      "imie": "Katarzyna Wysk",
+      "pozycja": "Komitet Rodzicielski"
+    },
+    {
+      "imie": "Katarzyna Nowak-Galik",
+      "pozycja": "Komitet Rodzicielski"
+    },
+    { "imie": "Bogumila Lubecka", "pozycja": "Sekretarz Finansowy" }
   ],
   "nauczyciele": [
     {
@@ -35,35 +30,39 @@
       "klasa": "zerówka"
     },
     {
-      "imie": "Edyta Bierdziewski",
+      "imie": "Joanna Orpik",
       "klasa": "klasa I"
     },
     {
-      "imie": "Beata Podobinski",
+      "imie": "Edyta Bierdziewski",
       "klasa": "klasa II"
     },
     {
-      "imie": "Maryna Cruz",
+      "imie": "Beata Podobinski",
       "klasa": "klasa III"
     },
     {
-      "imie": "Katarzyna Milewski",
+      "imie": "Agnieszka Nowak",
       "klasa": "klasa IV"
     },
     {
-      "imie": "Barbara Tutka",
+      "imie": "Katarzyna Milewski",
       "klasa": "klasa V"
+    },
+    {
+      "imie": "Barbara Tutka",
+      "klasa": "klasa VI"
     },
     {
       "imie": "Anna Goluszka",
       "klasa": "klasa VI"
     },
     {
-      "imie": "Ewa Wielgolaski",
+      "imie": "Justyna Miller",
       "klasa": "klasa VII"
     },
     {
-      "imie": "Agnieszka Nowak",
+      "imie": "Ewa Wielgolaski",
       "klasa": "klasa VIII"
     },
     {
@@ -71,7 +70,7 @@
       "klasa": "klasa IX"
     },
     {
-      "imie": "Joanna Kaczorek",
+      "imie": "Anna Goluszka",
       "klasa": "klasa X"
     },
     {
@@ -79,7 +78,7 @@
       "klasa": "klasa X"
     },
     {
-      "imie": "Magdalena Bialek",
+      "imie": "Joanna Kaczorek",
       "klasa": "klasa XI Maturalna"
     }
   ]
