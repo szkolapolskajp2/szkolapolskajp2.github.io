@@ -19,6 +19,6 @@ echo "].map(([title, albumUrl, coverUrl]) => {
       'https://photos.google.com/share/' + albumUrl,
       'https://lh3.googleusercontent.com/pw/' + coverUrl.replace(/=.*\$/g, '=s222-p-k-no')
     ]
-    parsedEntry['index'] = parseInt(index) || 100;
+    parsedEntry['index'] = parseInt(index) + 1 || 100;
     return parsedEntry;
 }).sort((a,b) => a.index - b.index)" >> $outputFile
