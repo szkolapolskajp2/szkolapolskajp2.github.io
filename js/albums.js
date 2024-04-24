@@ -1005,7 +1005,7 @@ var albums = [
 ["2023-2024/17. Jasełka. Koncert kolęd i pastorałek",
 "AF1QipOMGTIPJxSCl3xUsBBPRT5FeAAdatYpwtkv8LQJF_FhTnPC0HBwYA9_GMIROQHVaQ?key=azM4N0g2b0JtU1haSkxmem1CR3ZTMlo3RVItZ0Fn",
 "AP1GczP5B38fu_pgNL_M02dIS6c4ruPWcq7oLguC4_bVbn8VjaP54YhNwSFKaHXEtmPoYBdepjNViG9AXVOgyeBouqJT6r1w6Dn9nXEylv8fH5jU_F-f9r0=w598-h315-p-k"],
-["2024-2024/18. Spotkanie z Barbarą Kosmowską",
+["2023-2024/18. Spotkanie z Barbarą Kosmowską",
 "AF1QipNBZl9uxsgtFeKDVe-vlE5kpBNBnTpQuiQ6yR4vPpY5oO4okqSSfQCMj8ydEdravQ?key=QVBlR3pLRDdmNW1aUm4zcjVEMDVWX2ZWQV9GRmtR",
 "AP1GczNxPD0FqGwJOoG-To8ITKT8U1OzwvOyv-HA6WyDHTsxsQosu7OUd_Y3XjQeyK2E3sQ3IlzIde3ZdTAjUygWhEoAM0yD-ctcf69FREEl34JjTOqSc7s=w600-h315-p-k"],
 ["2023-2024/19. Dzień Babci i Dziadka",
