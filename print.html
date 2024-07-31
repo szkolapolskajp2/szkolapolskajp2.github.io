@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        width: 794px;
+      }
+      .form {
+        padding: 30px;
+      }
+      .form-header {
+        text-align: center;
+        margin: 0 0 10px 60px;
+      }
+      .form-sign {
+        display: flex;
+      }
+      .form-row {
+        margin-bottom: 18px;
+      }
+      .form-qr {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="lib/jquery-qrcode.min.js"></script>
+    <script src="js/register.js"></script>
+    <script type="text/javascript">
+      const hash = window.location.hash.slice(1);
+      const keys = [
+        "firstName",
+        "lastName",
+        "dob",
+        "pob",
+        "Address",
+        "CityState",
+        "zipCode",
+        "ASchoolGrade",
+        "PSchoolGrade",
+        "attendedAlready",
+        "parent1Name",
+        "parent1LastName",
+        "parent1Relation",
+        "parent1Tel",
+        "parent1Email",
+        "gk",
+        "parent2Name",
+        "parent2LastName",
+        "parent2Relation",
+        "parent2Tel",
+        "parent2Email",
+        "polishLevel",
+        "religion",
+        "mediaPermission",
+        "emergencyContact",
+        "additional",
+      ];
+      const values = decode64(hash).split("|");
+      const obj = {};
+      for (let i = 0; i < keys.length; i++) {
+        obj[keys[i]] = values[i];
+      }
+      const { child, parent1, parent2, questions } = extractData(obj);
+      $("#root").html(getHtml(child, parent1, parent2, questions, true));
+      $("#form-qr").qrcode({
+        width: 180,
+        height: 180,
+        text: origin + path,
+      })[0];
+
+      localStorage.setItem('printed', (localStorage.getItem('printed') || '') + Object.values(obj).join("|") + '\n')
+      setTimeout(() => {
+        window.print()
+      });
+    </script>
+  </body>
+</html>
+window.location.href

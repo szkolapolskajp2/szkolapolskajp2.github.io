@@ -24,14 +24,7 @@ const getHtml = (
   question, // {religion, attendedAlready, polishLevel, mediaPermission, emergencyContact, additional }
   tylkoInfo = false
 ) => `
-<style>
-  body {margin: 0;width: 794px;}
-  .form {padding: 30px;}
-  .form-header {text-align: center; margin: 0 0 10px 60px}
-  .form-sign {display: flex;}
-  .form-row { margin-bottom: 18px;}
-  .form-qr {position:absolute;top:40px;left:30px;}
-</style>
+<div class="form-qr"></div>
 <div class="form">
   ${
     tylkoInfo
@@ -40,9 +33,9 @@ const getHtml = (
   <div class="form-header">
     <h1>KARTA REJESTRACYJNA</h1>
     <h2>Szkoła Polska im. Jana Pawła II</h2>
-    <span>200 Broadhead Ave. East Stroudsburg, PA 18301</span>
+    <span>1200 PA-390 Cresco, PA 18326</span>
     <br/>
-    <span>2023-2024</span>
+    <span>2024-2025</span>
   </div>`
   }
   <br /><br />
@@ -246,10 +239,10 @@ const submitAndPrint = (form) => {
 
   const base64encoded = encodeString(Object.values(obj).join("|"));
   const origin = "https://szkolapolskajp2.github.io"; //window.location.origin
-  const path = `/rform?${stringHash(base64encoded)}#${base64encoded}`;
+  const path = `/print?${stringHash(base64encoded)}#${base64encoded}`;
   const div = $(document.createElement("DIV")).qrcode({
-    width: 180,
-    height: 180,
+    width: 256,
+    height: 256,
     text: origin + path,
   })[0];
   div.className = "form-qr";
@@ -257,20 +250,18 @@ const submitAndPrint = (form) => {
   console.log(Object.values(obj).join("|"));
 
   if (window.print) {
-    var winPrint = window.open(
-      origin,
-      "DescriptiveWindowName",
-      "left=0,top=0,width=800,height=600,toolbar=0,scrollbars=0,status=0"
-    );
+    var winPrint = window.open(origin);
 
     winPrint.document.write(
-      `<body>${getHtml(child, parent1, parent2, questions)}<body>`
+      `<body style="padding: 30px;">
+        <br/>
+        <h5>Szkoła Polska im. Jana Pawła II 2024-2025</h5>
+        <h3>${child.lastName}, ${child.name}; ${child.klasa} klasa</h3>
+      <body>`
     );
-    winPrint.document.body.append(div);
+    winPrint.document.body.prepend(div);
     winPrint.document.close();
     winPrint.focus();
-    winPrint.print();
-    winPrint.close();
     return false;
   } else {
     window.location.href = origin + path;
