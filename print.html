@@ -24,6 +24,12 @@
         left: 30px;
       }
     </style>
+    <style type="text/css" media="print">
+      @page {
+        size: auto; /* auto is the initial value */
+        margin: 0; /* this affects the margin in the printer settings */
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
@@ -72,9 +78,14 @@
         text: origin + window.location.search + window.location.hash,
       })[0];
 
-      localStorage.setItem('printed', (localStorage.getItem('printed') || '') + Object.values(obj).join("|") + '\n')
+      localStorage.setItem(
+        "printed",
+        (localStorage.getItem("printed") || "") +
+          Object.values(obj).join("|") +
+          "\n"
+      );
       setTimeout(() => {
-        window.print()
+        window.print();
       });
     </script>
   </body>
