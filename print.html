@@ -75,7 +75,7 @@
       $(".form-qr").qrcode({
         width: 180,
         height: 180,
-        text: origin + window.location.search + window.location.hash,
+        text: origin + '/rform' + window.location.search + window.location.hash,
       })[0];
 
       localStorage.setItem(

@@ -1,11 +1,70 @@
 <html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        width: 794px;
+      }
+      .form {
+        padding: 30px;
+      }
+      .form-header {
+        text-align: center;
+        margin: 0 0 10px 60px;
+      }
+      .form-sign {
+        display: flex;
+      }
+      .form-row {
+        margin-bottom: 18px;
+      }
+      .form-qr {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+      }
+    </style>
+    <style type="text/css" media="print">
+      @page {
+        size: auto; /* auto is the initial value */
+        margin: 0; /* this affects the margin in the printer settings */
+      }
+    </style>
+  </head>
   <body>
     <div id="root"></div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/register.js?v=2"></script>
     <script type="text/javascript">
       const hash = window.location.hash.slice(1);
-      const keys = ['firstName', 'lastName', 'dob', 'pob', 'Address', 'CityState', 'zipCode', 'ASchoolGrade', 'PSchoolGrade', 'attendedAlready', 'parent1Name', 'parent1LastName', 'parent1Relation', 'parent1Tel', 'parent1Email', 'gk', 'parent2Name', 'parent2LastName', 'parent2Relation', 'parent2Tel', 'parent2Email', 'polishLevel', 'religion', 'mediaPermission', 'emergencyContact', 'additional']
+      const keys = [
+        "firstName",
+        "lastName",
+        "dob",
+        "pob",
+        "Address",
+        "CityState",
+        "zipCode",
+        "ASchoolGrade",
+        "PSchoolGrade",
+        "attendedAlready",
+        "parent1Name",
+        "parent1LastName",
+        "parent1Relation",
+        "parent1Tel",
+        "parent1Email",
+        "gk",
+        "parent2Name",
+        "parent2LastName",
+        "parent2Relation",
+        "parent2Tel",
+        "parent2Email",
+        "polishLevel",
+        "religion",
+        "mediaPermission",
+        "emergencyContact",
+        "additional",
+      ];
       const values = decode64(hash).split("|");
       const obj = {};
       for (let i = 0; i < keys.length; i++) {
