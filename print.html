@@ -69,7 +69,7 @@
       $("#form-qr").qrcode({
         width: 180,
         height: 180,
-        text: origin + window.location.search + window.location.hash;
+        text: origin + window.location.search + window.location.hash,
       })[0];
 
       localStorage.setItem('printed', (localStorage.getItem('printed') || '') + Object.values(obj).join("|") + '\n')
