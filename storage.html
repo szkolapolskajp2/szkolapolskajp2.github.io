@@ -1,0 +1,14 @@
+<html>
+  <head> </head>
+  <body>
+    <pre id="root"></pre>
+    <script>
+      const root = document.getElementById("root");
+      root.innerHTML = JSON.stringify(
+        JSON.parse(localStorage.getItem("printed")),
+        null,
+        2
+      );
+    </script>
+  </body>
+</html>

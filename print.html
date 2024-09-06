@@ -29,7 +29,7 @@
     <div id="root"></div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="lib/jquery-qrcode.min.js"></script>
-    <script src="js/register.js"></script>
+    <script src="js/register.js?v=1"></script>
     <script type="text/javascript">
       const hash = window.location.hash.slice(1);
       const keys = [
@@ -48,7 +48,6 @@
         "parent1Relation",
         "parent1Tel",
         "parent1Email",
-        "gk",
         "parent2Name",
         "parent2LastName",
         "parent2Relation",
@@ -70,7 +69,7 @@
       $("#form-qr").qrcode({
         width: 180,
         height: 180,
-        text: origin + path,
+        text: origin + window.location.search + window.location.hash;
       })[0];
 
       localStorage.setItem('printed', (localStorage.getItem('printed') || '') + Object.values(obj).join("|") + '\n')
@@ -80,4 +79,3 @@
     </script>
   </body>
 </html>
-window.location.href
