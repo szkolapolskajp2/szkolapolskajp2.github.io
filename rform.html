@@ -13,6 +13,11 @@
       }
       const { child, parent1, parent2, questions } = extractData(obj);
       $("#root").html(getHtml(child, parent1, parent2, questions, true));
+      $(".form-qr").qrcode({
+        width: 180,
+        height: 180,
+        text: window.location.href,
+      })[0];
       // setTimeout(() => {
       //   location.href = location.href.replace('https://szkolapolskajp2.github.io', 'http://192.168.5.40:3000')
       // })

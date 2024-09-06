@@ -21,23 +21,17 @@ const getHtml = (
   child, // {name, lastName, dob, pob, klasa, class, address},
   mainParent, // {name, lastName, phone, email},
   otherParent, // {name, lastName, phone, email},
-  question, // {religion, attendedAlready, polishLevel, mediaPermission, emergencyContact, additional }
-  tylkoInfo = false
+  question // {religion, attendedAlready, polishLevel, mediaPermission, emergencyContact, additional }
 ) => `
 <div class="form-qr"></div>
 <div class="form">
-  ${
-    tylkoInfo
-      ? ""
-      : `
   <div class="form-header">
     <h1>KARTA REJESTRACYJNA</h1>
     <h2>Szkoła Polska im. Jana Pawła II</h2>
     <span>1200 PA-390 Cresco, PA 18326</span>
     <br/>
     <span>2024-2025</span>
-  </div>`
-  }
+  </div>
   <br /><br />
   <div>
     <div class="form-row">Nazwisko i imię ucznia: <b>${child.lastName}, ${
@@ -88,18 +82,13 @@ const getHtml = (
         question.mediaPermission
       }</b>
     </div>
-    ${
-      tylkoInfo
-        ? ""
-        : `
     <div class="form-row">Podpis rodziców lub opiekunów</div>
     <br /><br />
     <div class="form-sign">
       <span style="flex: 6; border-bottom: 1px dotted black;"></span>
       <span style="flex: 1; text-align: end;">Data:</span>
       <span style="flex: 2; border-bottom: 1px dotted black;"></span>
-    </div>`
-    }
+    </div>
   </div>
 </div>
 `;
