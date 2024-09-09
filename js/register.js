@@ -238,23 +238,19 @@ const submitAndPrint = (form) => {
 
   console.log(Object.values(obj).join("|"));
 
-  if (window.print) {
-    var winPrint = window.open(origin);
+  var winPrint = window.open(origin);
 
-    winPrint.document.write(
-      `<body style="padding: 30px;">
+  winPrint.document.write(
+    `<body style="padding: 30px;">
         <br/>
         <h5>Szkoła Polska im. Jana Pawła II 2024-2025</h5>
         <h3>${child.lastName}, ${child.name}; ${child.klasa} klasa</h3>
       <body>`
-    );
-    winPrint.document.body.prepend(div);
-    winPrint.document.close();
-    winPrint.focus();
-    return false;
-  } else {
-    window.location.href = origin + path;
-  }
+  );
+  winPrint.document.body.prepend(div);
+  winPrint.document.close();
+  winPrint.focus();
+  return false;
 };
 
 function encodeString(str) {
