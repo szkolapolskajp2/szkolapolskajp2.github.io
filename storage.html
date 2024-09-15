@@ -21,7 +21,7 @@
   </head>
   <body>
     <button
-      onclick="navigator.clipboard.writeText(localStorage.getItem('printed'));"
+      onclick="navigator.clipboard.writeText(JSON.stringify(Object.values(localStorage)));"
     >
       Copy
     </button>
@@ -34,7 +34,7 @@
     </button>
     <script>
       const root = document.getElementById("root");
-      root.innerHTML = localStorage.getItem("printed");
+      root.innerHTML = JSON.stringify(Object.values(localStorage))
     </script>
   </body>
 </html>
