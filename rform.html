@@ -38,6 +38,7 @@
     <script src="js/register.js?v=3"></script>
     <script type="text/javascript">
       const hash = window.location.hash.slice(1);
+      const decoded = decode64(hash)
       const keys = [
         "firstName",
         "lastName",
@@ -65,7 +66,7 @@
         "emergencyContact",
         "additional",
       ];
-      const values = decode64(hash).split("|");
+      const values = decoded.split("|");
       const obj = {};
       for (let i = 0; i < keys.length; i++) {
         obj[keys[i]] = values[i];
@@ -77,7 +78,8 @@
         height: 180,
         text: window.location.href,
       })[0];
-      localStorage.setItem(window.location.search, window.location.hash.slice(1))
+      localStorage.setItem(window.location.search, decoded)
+
       // setTimeout(() => {
       //   location.href = location.href.replace('https://szkolapolskajp2.github.io', 'http://192.168.5.40:3000')
       // })

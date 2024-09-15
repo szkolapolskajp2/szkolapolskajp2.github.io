@@ -65,7 +65,8 @@
         "emergencyContact",
         "additional",
       ];
-      const values = decode64(hash).split("|");
+      const decoded = decode64(hash);
+      const values = decodeed.split("|");
       const obj = {};
       for (let i = 0; i < keys.length; i++) {
         obj[keys[i]] = values[i];
@@ -78,12 +79,8 @@
         text: origin + '/rform' + window.location.search + window.location.hash,
       })[0];
 
-      localStorage.setItem(
-        "printed",
-        (localStorage.getItem("printed") || "") +
-          Object.values(obj).join("|") +
-          "\n"
-      );
+      localStorage.setItem(window.location.search, decoded)
+
       setTimeout(() => {
         window.print();
       });
