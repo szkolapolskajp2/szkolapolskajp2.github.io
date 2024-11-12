@@ -1079,7 +1079,22 @@ var albums = [
 "AP1GczNJKMPHBLZCCGtyTo21WZIj2KdUE_jqtL4EINeznkFBUZOkQheAd9NCkJrPZjpQpzI_w_mPL3tmI7-Tas6nMQiokcrlrhtW3OeLIpSNdx2dJwGidbI=w600-h315-p-k"],
 ["2024-2025/0. Stroudfest",
 "AF1QipOnyehHCb1XDBXx52a2X4eKKL5ZXoIYoXwF6x1V-ZsBySGxe_ixs66v5MmNqQI3Wg?key=YmppSmVwdmdnSHZ1bWdRZ243LWhKSm1SM2FuVkp3",
-"AP1GczPlLsw3rHUt6c3Z6RHZuBei-AYe7F4Ot-zpluqvnmjzotjj6w1GIEbfh_wNhQ9foDhvv26tKbnEFbDLbz0CdOiaTNoqWhOtFb7LhoZCpDMk-Wh4nGM=w600-h315-p-k"],
+"AP1GczOZg4wMxuzn8uGZbanzTBM-l4QnpoHUNL5nz2P3E5iPDb84A1pMcZtLqweRe_ld_RsbNf3HpzKnCi_ToKLxbLHMg7x--CXqpWoRnxREL82iG4wRFSo=w600-h315-p-k"],
+["2024-2025/1. Rozpoczęcie roku szkolnego",
+"AF1QipPxND6tKgqZaF2BsM3eY-6vMfW5bhWW1xveQBTI_YG__Wl2cyMNpfsSpvUkEPpeMg?key=cjNkWVFORVdjYUZMdHVhTTd2Q0daaHU2aGZaTjRR",
+"AP1GczP8OF0WAOUsl_ld_2ZM_m1gX7xfwWX6GjWGdxQbUbwn_9m2WxHVbxneUj8qsGXxVUEjCJLCgnAa3fggfh-h6wW4DSDWElpBhmO0gsd287X-WIFNxZ0=w600-h315-p-k"],
+["2024-2025/2.Parada Pułaskiego (Filadelfia)",
+"AF1QipPbkucATQT5A6Zia3_kwsHvakkjUMAnR-fu-NE73DBJZHmCxCkpMfQD6LWjh9LDoA?key=Z0tBRFc5RGljOTBQQkU3Ung2bEZWTjFOSWlDNmRB",
+"AP1GczMXypUwCySqhnwWwRopIm6TlGMLgBxT3bbAQQVzdEMkeilmnj6voHj1oiSooEVg_WLaABCMe6UY3XuGVFiTZ8LSVqo21SIJbLdEd202cOqpaJuP1wQ=w600-h315-p-k"],
+["2024-2025/3. Polonijny Dzień Dwujęzyczności",
+"AF1QipN_VfhNbztwJYIBDCqTgThuItBAYlht3meLzdwzyqrCEYT9dkuGYYAmTbD9enmXew?key=N3lGMXlrRDBucDg3ZUZfc1JqUXFYMU1mb29IQ1Vn",
+"AP1GczN3h07E2cu7A0YHhrlD5JHrxsn0XaI7Z1QA9_mJrMFWU0i8ySY4HmDxPlZH1UWqIwALZU-cMe3dbG4AizW4ZL0USOYSEduuNHFVWFkM3_UIrCr4tCY=w600-h315-p-k"],
+["2024-2025/4. Otwarcie nowej lokalizacji szkoły i Dzień Edukacji Narodowej",
+"AF1QipP6oBvPXEoTbY8-R3P0FZYo9Di5j-t_U5xCnAElAdEDLYgf4AWBYi_Xk8dN-_bCTg?key=ZWpjVkF1OEJ4SElWcVZ5dmZaTUM5YlYySHhDbWV3",
+"AP1GczOhmA2cVR49qHqstkyoQRobtf1ODRsJ22egw9wPRLv1IFAkCIPCvjB98ar7zyCpCD37qPvNRmd1n2BTWl_XJajYp7G7kcXBajI_sW8ibe0yeDuWG1k=w600-h315-p-k"],
+["2024-2025/5. WLCE (ustny egzamin)",
+"AF1QipPgNhJ9gRI2t0ZBAGxKf1LzbFTaDxR8UWSDvWQyfl8kZ5S8LPUwHuaVD8inn2jMog?key=RE0wMVFHNEtiNVV2UGxYSHl4U2EwREZLWWZWR2lR",
+"AP1GczN1MULl16Ypj-OH4FftmwHptOXKnwYqLLhan-Pp2lv6QBSQdEdkBiVDsHqB3cCldEUaSPhidyjIaJC8u067rMb0Jk-7gLKQNgZ4XdVauMd8scHfntc=w600-h315-p-k"],
 ].map(([title, albumUrl, coverUrl]) => {
     const [year, index, name] = title.split(/\/( *[0-9]{1,2}\. *)/g)
     const parsedEntry = [
