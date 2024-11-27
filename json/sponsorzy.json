@@ -6,7 +6,7 @@
   },
   {
     "img": "img/sponsorzy/wedzonka.jpg",
-    "url": "http://poconowedzonka.com/",
+    "url": "https://www.facebook.com/poconowedzonka/",
     "imie": "Wędzonka"
   },
   {
@@ -48,5 +48,10 @@
     "img": "img/sponsorzy/bella-bakery.jpeg",
     "url": "https://www.facebook.com/pages/category/bakery/Bella-Artisan-Bakery-105558472062551/",
     "imie": "Bella Artisan Bakery"
+  },
+  {
+    "img": "img/sponsorzy/fantazja.jpg",
+    "url": "https://maps.app.goo.gl/ZvC2ycLbToMB8rdU8",
+    "imie": "Fantazja"
   }
 ]
