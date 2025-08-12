@@ -240,10 +240,11 @@ const submitAndPrint = (form) => {
 
   var winPrint = window.open(origin);
 
+  const year = new Date().getFullYear();
   winPrint.document.write(
     `<body style="padding: 30px;">
         <br/>
-        <h5>Szkoła Polska im. Jana Pawła II 2024-2025</h5>
+        <h5>Szkoła Polska im. Jana Pawła II ${year}-${year+1}</h5>
         <h3>${child.lastName}, ${child.name}; ${child.klasa} klasa</h3>
       <body>`
   );
