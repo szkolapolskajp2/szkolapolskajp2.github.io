@@ -1,3 +1,5 @@
+const currentYear = new Date().getFullYear();
+
 const stringHash = (str) => {
   let hash = 0;
   let chr;
@@ -30,7 +32,7 @@ const getHtml = (
     <h2>Szkoła Polska im. Jana Pawła II</h2>
     <span>1200 PA-390 Cresco, PA 18326</span>
     <br/>
-    <span>2024-2025</span>
+    <span>${currentYear}-${currentYear+1}</span>
   </div>
   <br /><br />
   <div>
@@ -224,7 +226,7 @@ const extractData = (obj) => {
 
 const submitAndPrint = (form) => {
   const obj = serializeForm(form);
-  const { child, parent1, parent2, questions } = extractData(obj);
+  const { child, questions } = extractData(obj);
 
   const base64encoded = encodeString(Object.values(obj).join("|"));
   const origin = "https://szkolapolskajp2.github.io"; //window.location.origin
@@ -240,11 +242,10 @@ const submitAndPrint = (form) => {
 
   var winPrint = window.open(origin);
 
-  const year = new Date().getFullYear();
   winPrint.document.write(
     `<body style="padding: 30px;">
         <br/>
-        <h5>Szkoła Polska im. Jana Pawła II ${year}-${year+1}</h5>
+        <h5>Szkoła Polska im. Jana Pawła II ${currentYear}-${currentYear + 1}</h5>
         <h3>${child.lastName}, ${child.name}; ${child.klasa} klasa</h3>
       <body>`
   );
