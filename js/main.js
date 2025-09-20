@@ -1,6 +1,6 @@
 (function ($) {
   "use strict";
-  $('#myModal').modal()
+  // $('#myModal').modal()
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
