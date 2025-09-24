@@ -7,7 +7,10 @@ echo "var albums = [" >> $outputFile
 while IFS= read -r line; do
   result=$(curl "$line" | sed 's/<meta/\n<meta/g' | grep  -E '<meta property="og:(title|image)"' | cut -c36- | sed 's/..$//')
   readarray -t SPLIT < <(echo "$result")
-  echo "[\"${SPLIT[0]}\"," >> $outputFile
+
+  title=$(echo ${SPLIT[0]} | grep -o '^[^·]*' | xargs )
+
+  echo "[\"${title}\"," >> $outputFile
   echo "\"${line/"https://photos.google.com/share/"}\",">> $outputFile # split on /share/
   echo "\"${SPLIT[1]/"https://lh3.googleusercontent.com/pw/"}\"]," >> $outputFile  # split on .com
 done < albums.txt
