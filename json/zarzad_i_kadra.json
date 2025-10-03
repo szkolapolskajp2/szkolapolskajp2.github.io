@@ -3,7 +3,7 @@
     { "imie": "Hanna Czuma", "pozycja": "DYREKTOR SZKOLY" },
     { "imie": "Bogumila Lubecka", "pozycja": "Rada Dyrektorów" },
     { "imie": "Magdalena Archacka", "pozycja": "Rada Dyrektorów" },
-    { "imie": "Anna Jozwiak", "pozycja": "Komisja Rewizyjna" },
+    { "imie": "Ewelina Fila", "pozycja": "Komisja Rewizyjna" },
     { "imie": "Mariusz Hacia", "pozycja": "Komisja Rewizyjna", "m": true },
     {
       "imie": "Konrad Dudziak",
@@ -18,7 +18,8 @@
       "imie": "Paulina Nowak-Galik",
       "pozycja": "Komitet Rodzicielski"
     },
-    { "imie": "Bogumila Lubecka", "pozycja": "Sekretarz Finansowy" }
+    { "imie": "Bogumila Lubecka", "pozycja": "Sekretarz Finansowy" },
+    { "imie": "Ewa Fryc", "pozycja": "Sekretarz Finansowy" }
   ],
   "nauczyciele": [
     {
