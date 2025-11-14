@@ -18,7 +18,8 @@
     .then((r) => r.json())
     .then((obj) => {
       const $el = [];
-      for (const { img, url, imie } of obj) {
+      for (const { img, url, imie, inactive } of obj) {
+        if (inactive) continue;
         $el.push(`<div class="col-md-6 col-lg-2 text-center team mb-5">
             <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
                 <img class="img-fluid w-100" src="${img}" alt="sponsor-image" />

@@ -7,7 +7,8 @@
   {
     "img": "img/sponsorzy/wedzonka.jpg",
     "url": "https://www.facebook.com/poconowedzonka/",
-    "imie": "Wędzonka"
+    "imie": "Wędzonka",
+    "inactive": "true"
   },
   {
     "img": "img/sponsorzy/white-tatra.jpeg",
@@ -52,6 +53,12 @@
   {
     "img": "img/sponsorzy/fantazja.jpg",
     "url": "https://maps.app.goo.gl/ZvC2ycLbToMB8rdU8",
-    "imie": "Fantazja"
+    "imie": "Fantazja",
+    "inactive": "true"
+  },
+  {
+    "img": "img/sponsorzy/poloniatechnica.jpg",
+    "url": "https://poloniatechnica.org/",
+    "imie": "Polonia Technica"
   }
 ]

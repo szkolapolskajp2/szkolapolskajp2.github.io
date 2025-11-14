@@ -1224,6 +1224,21 @@ var albums = [
 ["2025-2026/11. Mazezilla piknik jesienny",
 "AF1QipOuqigM7oXqvEi29UiXgJyoFBRKTJOIkMdLxwUJ8-XLvWj1x-pdF9Y1cQkmF7PeYQ?key=Q0M2OU9DOGsxQTc3Tm9IXy1TdzlLdThnS1V0Q2RR",
 "AP1GczP3YyH9l7W2CBCxj_3CTxbCgCNq6BDvXKZi4t-xDcghGjwxkg7JvuTDEzyaiLOzYd2mYkPD9EBdHvLMXPJYUyxs1QNgXoUHW3h_RpCX1v4A-pZMkfY7=w600-h315-p-k"],
+["2025-2026/12.Akcja &quot;Pamiętamy o weteranach&quot;",
+"AF1QipMb9vuAASPmpvP_2MTCAgQ53DRNHYcsDc9oTbeStdj6xW3rG9nBarLzX6xScvjUUg?key=ZjVuV0NLM2RhNGpWaDBmdndNbkR3aGdwcHpTMlJn",
+"AP1GczNc9-d8ru02yB1ddwbf2DKJB79BtoM_T89AcmYsJncEsv7LgzvZOiaNz1EJhPfTFWHxvvOf_crBzrLxU__GUh3ahdgckySXzWGcnY6qLAkNb-aTpRB0=w600-h315-p-k"],
+["2025-2026/13.Debata 2025",
+"AF1QipOtJgNp1ANLq8NqfcnuggiE-z6sfMcZWcgLJIUuUHonKM3RJ8E65JVjDMCAksg1LQ?key=bmY3b3FKYkowb2h3clFvS1BXUjQ4V3VpSWhTX0NB",
+"AP1GczNWUqZh4fSkwRuLnnE2IlxCAVXlVj_a9BvxBmOOLp2xw-O7L4QAkLXrJFI-nWja73nc4Cto9Y2IY3EyW-9xPDaPEXgyoPwd2s1snOUpTAFYJQ8B4vZ8=w600-h315-p-k"],
+["2025-2026/14. Święto Niepodległości w klasach",
+"AF1QipO9u1S1e7ubUcZ2LxqKOiadjWjrNFaluJVJMO0W7qjoSu4kG6nZxws5GhkFJioUOQ?key=ZXBVN1dyWlZtVndZX3NQM1AzbVkyT0RXZWxQeVh3",
+"AP1GczN-CY4KQsWtF6OQ_ybEn3wSxa6J1hjnB4A6TaCCkBYdfisGi0WTQEZgHR0RpFHFzyGwQkIqnhlzrUrISWCJANdaZhiaL4YRH9Q1z41t4BdEFdzo7RdP=w600-h315-p-k"],
+["2025-2026/15. Apel z okazji Święta Niepodległości",
+"AF1QipPLq1r_FHczclhvUbLSdzyLTKXb9V2tSos60FrYFD9b0QckXihswjW9ZM-DnlhKgw?key=elN3Y2wtNG96M2pOSjc1V01OSi10Y0xkT0pBNnhn",
+"AP1GczP-FzspVUHJnCvk613gby67sve2E8TQNyLEfVWGrIyfDNgclWxX1i381YmRRrF33aJ3aDKXB8HzPp9pRe4RHrBo7VbN_aHZKGCpHLuGDgS07JVFAmbe=w600-h315-p-k"],
+["2025-2026/16. Bal z okazji Jubileuszu 100-lecia CPSD",
+"AF1QipNrJwdYG1iHHkAdqQv59V1RSj9xyx1buXuMaifAZnf9dtaryfSLrp6L-_nOvdrznQ?key=Y2ZuUTlralIxSk1GdU1NRVA2VVFILUdERUN5TTRB",
+"AP1GczPmqQ3mCyzr2PUgZeSsPbvVUR4yAbi9tOhZc9TDAcFRShJr5EJYGfiop0GUT7DVMN6Xcu0IWnBs3T1m-q8f-Dq-vgEGyQOYTMiowm6ra2oIv9MLZzr5=w600-h315-p-k"],
 ].map(([title, albumUrl, coverUrl]) => {
     const [year, index, name] = title.split(/\/( *[0-9]{1,2}\. *)/g)
     const parsedEntry = [
