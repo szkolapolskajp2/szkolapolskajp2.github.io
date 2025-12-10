@@ -1,8 +1,5 @@
 // auto-generated please update albums.txt
 var albums = [
-["",
-"dddAF1QipMJvmy_L9vgzsQiyXm13EwQ4jwVm5LWMQst-kmd9VOtAJpF_ogRgla-g0UrPdpB1A?key=Z0l3WUFGUXdITGl0QjN5LTdLRUlMd0U5NXROc2t3",
-""],
 ["2022-2023/19. Tubing",
 "AF1QipMcZyK2eeqqawTTmiylyjf5tXn1eQyXIVqk_7SDwS3K7fi9zzRBvOiv1q1qpSeMNA?key=M3VsU2ZYMFZwZHpCNDZlNUpyVkdMa0dNaHdHSmN3",
 "AP1GczP1s1plFZUczigcfnWIWJVB8zCISMW1CCCkQ9eiuaL3lpgohUYNIhSwKKB6DDmU9ePxTJBeO5NHmK4KWzuUm0GKpgPb285ChXqv7X4u2Te4J4Yhcmo=w600-h315-p-k"],
