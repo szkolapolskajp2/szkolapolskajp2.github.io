@@ -1,8 +1,8 @@
 // auto-generated please update albums.txt
 var albums = [
-["2022-2023/22. Lake Placid",
-"AF1QipMJvmy_L9vgzsQiyXm13EwQ4jwVm5LWMQst-kmd9VOtAJpF_ogRgla-g0UrPdpB1A?key=Z0l3WUFGUXdITGl0QjN5LTdLRUlMd0U5NXROc2t3",
-"AP1GczOac_wQ-aX0uAKLUO-HXFbprL5aYab8umSzRSO7oqW4QivNLz--rZCA9Mm0qskbgiT8AAs0GUXnaA9LBOmJpaa5x5F77puit9o4wPJHsbJPoAP1-zQ=w600-h315-p-k"],
+["",
+"dddAF1QipMJvmy_L9vgzsQiyXm13EwQ4jwVm5LWMQst-kmd9VOtAJpF_ogRgla-g0UrPdpB1A?key=Z0l3WUFGUXdITGl0QjN5LTdLRUlMd0U5NXROc2t3",
+""],
 ["2022-2023/19. Tubing",
 "AF1QipMcZyK2eeqqawTTmiylyjf5tXn1eQyXIVqk_7SDwS3K7fi9zzRBvOiv1q1qpSeMNA?key=M3VsU2ZYMFZwZHpCNDZlNUpyVkdMa0dNaHdHSmN3",
 "AP1GczP1s1plFZUczigcfnWIWJVB8zCISMW1CCCkQ9eiuaL3lpgohUYNIhSwKKB6DDmU9ePxTJBeO5NHmK4KWzuUm0GKpgPb285ChXqv7X4u2Te4J4Yhcmo=w600-h315-p-k"],
@@ -1239,6 +1239,12 @@ var albums = [
 ["2025-2026/16. Bal z okazji Jubileuszu 100-lecia CPSD",
 "AF1QipNrJwdYG1iHHkAdqQv59V1RSj9xyx1buXuMaifAZnf9dtaryfSLrp6L-_nOvdrznQ?key=Y2ZuUTlralIxSk1GdU1NRVA2VVFILUdERUN5TTRB",
 "AP1GczPmqQ3mCyzr2PUgZeSsPbvVUR4yAbi9tOhZc9TDAcFRShJr5EJYGfiop0GUT7DVMN6Xcu0IWnBs3T1m-q8f-Dq-vgEGyQOYTMiowm6ra2oIv9MLZzr5=w600-h315-p-k"],
+["2025-2026/17. Andrzejki",
+"AF1QipMzMq13SGUgMuhHVWuTVEGXyRtsCm20nHCGp_x7dfYdIAuxFwO_--V23i3jhMWK1Q?key=Y0JkcmRtUkVWb19Rc1RQNVF4N0h1T0pQYjlmVUN3",
+"AP1GczOOROU5-mpobE0W8OJtH-PxLdu_hPpivE6Ybo6pRyHIPuP1VcK8HVytTxMN_rTl-2ymTZP5cX7t41adj4-km3zeB5M1ZIDBWFtlOpPawiVxxpsOaBug=w600-h315-p-k"],
+["2025-2026/18. Mikołajki",
+"AF1QipPEp5KlhKS48fpqbih_zV7LsKJ5kMnhFtk-OOgySOoGxER8ZYVGYHQbQDMEqGAvCw?key=cnhnNVczQnctSWh1MTRsTGxrSkhFWGF3ZmZrTy1B",
+"AP1GczNHC8-ILv41NidMHv-g2CcDbOtme3vlue1YPeX-J2weqpI7kygbBTbjNvHPBZWoSuAT0bE3M-R-ZLfnS6vu1BXa-3vlmX3Lb0ivx5ui_IKB9j4Oocic=w600-h315-p-k"],
 ].map(([title, albumUrl, coverUrl]) => {
     const [year, index, name] = title.split(/\/( *[0-9]{1,2}\. *)/g)
     const parsedEntry = [
