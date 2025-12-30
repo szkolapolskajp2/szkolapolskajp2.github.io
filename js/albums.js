@@ -1,5 +1,8 @@
 // auto-generated please update albums.txt
 var albums = [
+["2022-2023/22. Lake Placid",
+"AF1QipMJvmy_L9vgzsQiyXm13EwQ4jwVm5LWMQst-kmd9VOtAJpF_ogRgla-g0UrPdpB1A?key=Z0l3WUFGUXdITGl0QjN5LTdLRUlMd0U5NXROc2t3",
+"AP1GczOac_wQ-aX0uAKLUO-HXFbprL5aYab8umSzRSO7oqW4QivNLz--rZCA9Mm0qskbgiT8AAs0GUXnaA9LBOmJpaa5x5F77puit9o4wPJHsbJPoAP1-zQ=w600-h315-p-k"],
 ["2022-2023/19. Tubing",
 "AF1QipMcZyK2eeqqawTTmiylyjf5tXn1eQyXIVqk_7SDwS3K7fi9zzRBvOiv1q1qpSeMNA?key=M3VsU2ZYMFZwZHpCNDZlNUpyVkdMa0dNaHdHSmN3",
 "AP1GczP1s1plFZUczigcfnWIWJVB8zCISMW1CCCkQ9eiuaL3lpgohUYNIhSwKKB6DDmU9ePxTJBeO5NHmK4KWzuUm0GKpgPb285ChXqv7X4u2Te4J4Yhcmo=w600-h315-p-k"],
@@ -1242,6 +1245,21 @@ var albums = [
 ["2025-2026/18. Mikołajki",
 "AF1QipPEp5KlhKS48fpqbih_zV7LsKJ5kMnhFtk-OOgySOoGxER8ZYVGYHQbQDMEqGAvCw?key=cnhnNVczQnctSWh1MTRsTGxrSkhFWGF3ZmZrTy1B",
 "AP1GczNHC8-ILv41NidMHv-g2CcDbOtme3vlue1YPeX-J2weqpI7kygbBTbjNvHPBZWoSuAT0bE3M-R-ZLfnS6vu1BXa-3vlmX3Lb0ivx5ui_IKB9j4Oocic=w600-h315-p-k"],
+["2025-2026/19. Dzieci-dzieciom #Kaszanka 8.0",
+"AF1QipMkXnUOvTZhpl8IQLF2c3upeJGOY9UEZee27i0-FeaZHeXsFExnuTp7yAKYsdT_kA?key=QjFoU0x1aFRCaUhNOEVpaXYyYlg0b1N0QkJINFpn",
+"AP1GczOyO8XB2KuJgps8I2CGrh8-AZDnX2AdNk7JRXE2rwfE-4_cmsFZynlMrp_gkfDiH2kKED88fPE_BYZVUw52qvy23GSvtMXV42lMDrOznNVuc0YEImFo=w600-h315-p-k"],
+["2025-2026/20. Kiermasz Świąteczny &quot;Nasza Kraftoteka&quot;",
+"AF1QipN_LA_pUmoNy9kGNdD_8C6jbtMAqTEUu0fwD_7476_2uKf08dLHoOg2Z0yOHEjoJQ?key=Sk5wLXFVbFJJSTF5UGtfSkdjWUV6VTVVRWt1VWR3",
+"AP1GczMT9rCXmYe6Dgdyr9qQx7-Fb5z7trTxgF3PKC63mrtwo1LS6yHrdh5Ue7jW34nFGN7_LxU-axWD8ttQBChgM5RV6G2Eh_Fl6mVbwIYVN3zFUxHQzxvZ=w600-h315-p-k"],
+["2025-2026/21. Spotkanie literackie, Ewa Chotomska",
+"AF1QipMufwfWBIL566EonUWDsS7dMgWEXbByfnnvNL-xCNjzjBLyNYsws9Z0xbcjGuQ36Q?key=cGlQRXlhNDFlRnctVkotVjBZTk11VjNiVU9idmZB",
+"AP1GczNWEMQgMv8IzvTkbYdkA1FpTcSZkafh1WbKYBg4Fx1jyrBTcCdd958mwXrrnct9QITmoisoer6VGfoLxjrm8HCDmeCqm5T5jxDeYLM3WbxIdt0S5WOh=w600-h315-p-k"],
+["2025-2026/22.Wigilie klasowe.",
+"AF1QipOECV-uGxmYxNVdeQAAwKi-b2pHs1DeGR8Yog9jr_-h-HeETibl2JqX0JmGUQ4T6g?key=clVhU3dxMDNNVjBTNG1TSEkxVUpSODN4d2xsQlJR",
+"AP1GczOzf-Jpl3yirz7ZPaISn9o1HD0PrmkySIpfWcVQRs8E_ir61bWKWSJcmxMiAZDex7a3hdjg2MPqqI0Bn0RPyp7HxMDG2g0k3I2z1yktIC4m4VmxLK50=w600-h315-p-k"],
+["2025-2026/23. Jasełka 2025",
+"AF1QipM_VYM1SNdAjX9XaEO8gm2kKq46z78SKAEz5UGHcGn2DgzgGn3gbkAO-vKj5LXrvA?key=S2VRUkRqcVFHaThsU01LckF1UE0ydnZEdmNESUl3",
+"AP1GczPq3jnCHMzkFYSIArXRDZfidDp9fDU21RWTNdY4oO8ZJjlsgP8PxUialuQq5MDlGmUA3xXjKlARFl-ma2J4bzd3SHZ6JXe3s0axe-20eInvHOxKs6vX=w600-h315-p-k"],
 ].map(([title, albumUrl, coverUrl]) => {
     const [year, index, name] = title.split(/\/( *[0-9]{1,2}\. *)/g)
     const parsedEntry = [
