@@ -14,6 +14,28 @@
     return false;
   });
 
+  $(".dotacja-carousel")
+    .append(
+      `
+      <img  class="img-responsive dotacje" src="/img/dotacje/bon-dla-nauczyciela-2025.png"/>
+      <img  class="img-responsive dotacje" src="/img/dotacje/bon-dla-ucznia-2025.png"/>
+      <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2025.jpg"/>
+      <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2023.png"/>
+`
+    )
+    .owlCarousel({
+      center: true,
+      smartSpeed: 4000,
+      loop: false,
+      items: 1,
+      singleItem: true,
+      nav: true,
+      navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>",
+      ],
+    });
+
   fetch("/json/sponsorzy.json")
     .then((r) => r.json())
     .then((obj) => {
