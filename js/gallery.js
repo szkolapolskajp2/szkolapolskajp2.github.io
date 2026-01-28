@@ -65,7 +65,10 @@ const makeAlbumEl = (
   Promise.resolve().then(async () => {
     let galleryElements = "";
     let buttonSet = new Set();
-    for (let [albumName, albumUrl, photoUrl] of albums) {
+    const sortedAlbums = albums
+      .concat(albums1)
+      .sort((a, b) => a.index - b.index);
+    for (const [albumName, albumUrl, photoUrl] of sortedAlbums) {
       const [years, title] = albumName.split("/");
       galleryElements += makeAlbumEl(years, title, albumUrl, photoUrl);
       buttonSet.add(years);

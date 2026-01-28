@@ -1,8 +1,12 @@
 #!/bin/bash
 
-outputFile=./js/albums.js
-echo "// auto-generated please update albums.txt" > $outputFile
-echo "var albums = [" >> $outputFile
+
+albumIteration=1
+inputFile=albums1.txt
+outputFile=./js/albums1.js
+
+echo "// auto-generated please update albums{num}.txt" > $outputFile
+echo "var albums${albumIteration} = [" >> $outputFile
 
 while IFS= read -r line; do
   result=$(curl "$line" | sed 's/<meta/\n<meta/g' | grep  -E '<meta property="og:(title|image)"' | cut -c36- | sed 's/..$//')
@@ -13,7 +17,7 @@ while IFS= read -r line; do
   echo "[\"${title}\"," >> $outputFile
   echo "\"${line/"https://photos.google.com/share/"}\",">> $outputFile # split on /share/
   echo "\"${SPLIT[1]/"https://lh3.googleusercontent.com/pw/"}\"]," >> $outputFile  # split on .com
-done < albums.txt
+done < $inputFile
 
 echo "].map(([title, albumUrl, coverUrl]) => {
     const [year, index, name] = title.split(/\/( *[0-9]{1,2}\. *)/g)
@@ -24,4 +28,4 @@ echo "].map(([title, albumUrl, coverUrl]) => {
     ]
     parsedEntry['index'] = parseInt(index) + 1 || 100;
     return parsedEntry;
-}).sort((a,b) => a.index - b.index)" >> $outputFile
+})" >> $outputFile
