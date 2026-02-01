@@ -1,7 +1,7 @@
 {
   "zarzad": [
     { "imie": "Hanna Czuma", "pozycja": "DYREKTOR SZKOLY" },
-    { "imie": "Bogumila Lubecka", "pozycja": "Rada Dyrektorów" },
+    { "imie": "Bogumiła Lubecka", "pozycja": "Rada Dyrektorów" },
     { "imie": "Magdalena Archacka", "pozycja": "Rada Dyrektorów" },
     { "imie": "Ewelina Fila", "pozycja": "Komisja Rewizyjna" },
     { "imie": "Mariusz Hacia", "pozycja": "Komisja Rewizyjna", "m": true },
@@ -11,31 +11,27 @@
       "m": true
     },
     {
-      "imie": "Katarzyna Wysk",
-      "pozycja": "Komitet Rodzicielski"
-    },
-    {
       "imie": "Paulina Nowak-Galik",
       "pozycja": "Komitet Rodzicielski"
     },
-    { "imie": "Bogumila Lubecka", "pozycja": "Sekretarz Finansowy" },
+    { "imie": "Bogumiła Lubecka", "pozycja": "Sekretarz Finansowy" },
     { "imie": "Ewa Fryc", "pozycja": "Sekretarz Finansowy" }
   ],
   "nauczyciele": [
     {
-      "imie": "Krystyna Lapinski",
+      "imie": "Krystyna Lapiński",
       "klasa": "przedszkole"
     },
     {
-      "imie": "Edyta Dobrzynski",
+      "imie": "Edyta Dobrzyński",
       "klasa": "przedszkole"
     },
     {
-      "imie": "Kasia Wysk",
+      "imie": "Katarzyna Wysk",
       "klasa": "zerówka"
     },
     {
-      "imie": "Patrycja Dobrzynski",
+      "imie": "Patrycja Dobrzyński",
       "klasa": "zerówka"
     },
     {
@@ -51,7 +47,7 @@
       "klasa": "klasa I"
     },
     {
-      "imie": "Beata Podobinski",
+      "imie": "Beata Podobiński",
       "klasa": "klasa II"
     },
     {
