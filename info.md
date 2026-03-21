@@ -1,10 +1,3 @@
-#accounts
-AWS
-google
-github
-greatnonprofits.org
-donorbox?
-
 #links
 https://www.polonia.org/szkola/usa/polska-szkola-doksztalcajaca-im-jana-pawla-ii-stroudsburg-107
 http://www.polishbilingualday.com/language/pl/polska-szkola-im-jana-pawla-ii-w-east-stroudsburg-pa/
@@ -13,3 +6,4 @@ https://polishpages.poland.us/katalog,edukacja-nauka,szkola-jezyka-polskiego/w/1
 https://wiadomosci.com/polska-szkola-im-jana-pawla-ii-w-east-stroudsburg-pa-podsumowala-swoja-10-letnia-dzialalnosc/
 https://www.dobrapolskaszkolafoundation.com/1448-2/
 https://greatnonprofits.org/org/john-paul-ii-polish-school-of-the-poconos-inc
+https://pbc.uw.edu.pl/id/eprint/36731/1/BialyOrzel_NEW_YORK_2024_21.pdf
