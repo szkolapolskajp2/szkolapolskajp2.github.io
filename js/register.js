@@ -30,7 +30,7 @@ const getHtml = (
   <div class="form-header">
     <h1>KARTA REJESTRACYJNA</h1>
     <h2>Szkoła Polska im. Jana Pawła II</h2>
-    <span>1200 PA-390 Cresco, PA 18326</span>
+    <span>818 Main St Stroudsburg, PA 18360</span>
     <br/>
     <span>${currentYear}-${currentYear+1}</span>
   </div>
