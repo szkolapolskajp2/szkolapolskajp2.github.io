@@ -229,7 +229,7 @@ const submitAndPrint = (form) => {
   const { child, questions } = extractData(obj);
 
   const base64encoded = encodeString(Object.values(obj).join("|"));
-  const origin = "https://szkolapolskajp2.github.io"; //window.location.origin
+  const origin = "https://www.szkolapolskajp2.com"; //window.location.origin
   const path = `/print?${stringHash(base64encoded)}#${base64encoded}`;
   const div = $(document.createElement("DIV")).qrcode({
     width: 256,
