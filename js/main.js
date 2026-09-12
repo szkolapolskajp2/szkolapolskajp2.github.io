@@ -17,7 +17,7 @@
   $(".dotacja-carousel")
     .append(
       `
-      <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2026.jpg"/>
+      <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2026.png"/>
       <img  class="img-responsive dotacje" src="/img/dotacje/bon-dla-nauczyciela-2025.png"/>
       <img  class="img-responsive dotacje" src="/img/dotacje/bon-dla-ucznia-2025.png"/>
       <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2025.jpg"/>
