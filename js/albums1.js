@@ -60,6 +60,18 @@ var albums1 = [
 ["2025-2026/44. Polonijna Matura 2026",
 "AF1QipNqfXsHTwUgIzGqAK-AEilSLzo0a3JBHWpYn5b1_Nqq6dmaAbYAMU7Sz2seQyLlvg?key=T3V1RlZDcS1NZ1V0bmh0amZiMDBmS2hHcnNvSzNn",
 "AP1GczMBe161azr1LjvtOLEqHW9BDL2sWrFUyHQkIudmGdqGi_4Cll96fviDmMVamAhEEUm0p8_AZs665q1cWlK3DJZ4kX1_wMU-k9Eb3M05RdxwZkEUa1oh=w600-h315-p-k"],
+["2025-2026/45. Dzień Dziecka",
+"AF1QipNCSCe7H9UlVIydinI-6L50l-QZTbr1QkYZ6Xjz9WbWOeevxofKOgZFyTgx6BH75Q?key=a2pxbFhobGtaMXpqUF85UFNfVDQ2VXZRNHduR1Rn",
+"AP1GczM8E3WwgQkGF17w5M8tHmhgN5GotENAsovsu-He4LjjX_NckErhX_JkOXyWziNG3tLdENfKpRY1_DoWQHfE0OZHYNxBpmXXxtqBMXk2jLzJeA66qS74=w600-h315-p-k"],
+["2025-2026/46. Zakonczenie roku szkolnego",
+"AF1QipPLvUPpES4QchsFx7xriykR-VguHUQvSSUg4LC9fqLspcjYGwjlHevYO-S2WdOFZA?key=YXdZOVh0SXZDN1BTNXE0dkQ2QXdyUVFJZFFUWUNR",
+"AP1GczMymtDISqeDmv9RNN5JcNKLsmM53vF6iDJ-hHNY_JGXdL-cZlvTOA47e-q2GZD-ZSIrt0LkierMapHlsfKn2xJ44gyQ0Ihtwgn2r8yiVSAEZfwayw=w600-h315-p-k"],
+["2025-2026/47. Księga Jubileuszowa",
+"AF1QipOWPgrpaAH2Nha1x72m4K5FzmUryN_o5irv_llNJltOTCemKBVscrT-7W8mU62H1g?key=MjNESU9RQmpUbmgtMVJxVW1NOXh1U24zSEN4ODZR",
+"AP1GczNg5DocUUonyu13aCXbRg1n5vIM2z7KLXnR2RrWpOL5bukK7_5n9xPXx3qZnY9ZMvYZ-1xqUJHPwQJyjplbxsSD0sNtpli_97Tn0pb5oEVFC_gXIQ=w600-h315-p-k"],
+["2026-2027/0. Stroudfest",
+"AF1QipNm7o2FlNOhzMg8QspDWig-PO22X_YO1SiizFr1WrnBI4AfO0ARQwk9AOpWt4GoTw?key=VUFCcHBCdV94SGpqR2tfdF9saHZ6anVkcGQ5NC1n",
+"AP1GczOeWsPEmr4kAEswspcNuC7U1bUBVeyqxefKEGjDaqh2bOk4xv-frB2OF2lsI-Wjh84FQu5NOpmJS_cNPzgED6fYjKYf635acJ92POtjzJZD9gXKOQ=w600-h315-p-k"],
 ].map(([title, albumUrl, coverUrl]) => {
     const [year, index, name] = title.split(/\/( *[0-9]{1,2}\. *)/g)
     const parsedEntry = [
