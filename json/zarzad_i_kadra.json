@@ -2,7 +2,6 @@
   "zarzad": [
     { "imie": "Hanna Czuma", "pozycja": "DYREKTOR SZKOLY" },
     { "imie": "Bogumiła Lubecka", "pozycja": "Rada Dyrektorów" },
-    { "imie": "Magdalena Archacka", "pozycja": "Rada Dyrektorów" },
     { "imie": "Ewelina Fila", "pozycja": "Komisja Rewizyjna" },
     { "imie": "Mariusz Hacia", "pozycja": "Komisja Rewizyjna", "m": true },
     {
@@ -14,10 +13,17 @@
       "imie": "Paulina Nowak-Galik",
       "pozycja": "Komitet Rodzicielski"
     },
-    { "imie": "Bogumiła Lubecka", "pozycja": "Sekretarz Finansowy" },
     { "imie": "Ewa Fryc", "pozycja": "Sekretarz Finansowy" }
   ],
   "nauczyciele": [
+    {
+      "imie": "Milena Krawiec",
+      "klasa": "PSL 2-4"
+    },
+    {
+      "imie": "Karolina Soborej",
+      "klasa": "PSL 2-4"
+    },
     {
       "imie": "Krystyna Lapiński",
       "klasa": "przedszkole"
@@ -35,27 +41,23 @@
       "klasa": "zerówka"
     },
     {
-      "imie": "Milena Krawiec",
+      "imie": "Małgorzata Avery",
       "klasa": "klasa I"
     },
     {
-      "imie": "Magda Kaczmarska",
+      "imie": "Danka Watycha",
       "klasa": "klasa I"
     },
     {
       "imie": "Ewa Kawecki",
-      "klasa": "klasa I"
+      "klasa": "klasa II"
+    },
+    {
+      "imie": "Iwona Nowicki",
+      "klasa": "klasa II"
     },
     {
       "imie": "Beata Podobiński",
-      "klasa": "klasa II"
-    },
-    {
-      "imie": "Monika Solowianiuk",
-      "klasa": "klasa II"
-    },
-    {
-      "imie": "Joanna Orpik",
       "klasa": "klasa III"
     },
     {
@@ -63,19 +65,19 @@
       "klasa": "klasa IV"
     },
     {
-      "imie": "Ania Włodarczyk",
+      "imie": "Barbara Tutka",
       "klasa": "klasa V"
     },
     {
-      "imie": "Edyta Bierdziewski",
+      "imie": "Ania Włodarczyk",
       "klasa": "klasa VI"
     },
     {
-      "imie": "Bernarda Orzech",
+      "imie": "Edyta Bierdziewski",
       "klasa": "klasa VII"
     },
     {
-      "imie": "Barbara Tutka",
+      "imie": "Bernarda Orzech",
       "klasa": "klasa VIII"
     },
     {
@@ -83,7 +85,7 @@
       "klasa": "klasa IX"
     },
     {
-      "imie": "Anna Goluszka",
+      "imie": "Sylwia Kołodziejczak",
       "klasa": "klasa X"
     },
     {
