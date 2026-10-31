@@ -2,7 +2,9 @@
   "zarzad": [
     { "imie": "Hanna Czuma", "pozycja": "DYREKTOR SZKOLY" },
     { "imie": "Bogumiła Lubecka", "pozycja": "Rada Dyrektorów" },
-    { "imie": "Ewelina Fila", "pozycja": "Komisja Rewizyjna" },
+    { "imie": "Ewa Fryc", "pozycja": "Rada Dyrektorów" },
+    { "imie": "Ewelina Fila", "pozycja": "Rada Dyrektorów" },
+    { "imie": "Katarzyna Brzuzan", "pozycja": "Rada Dyrektorów" },
     { "imie": "Mariusz Hacia", "pozycja": "Komisja Rewizyjna", "m": true },
     {
       "imie": "Konrad Dudziak",
@@ -12,8 +14,7 @@
     {
       "imie": "Paulina Nowak-Galik",
       "pozycja": "Komitet Rodzicielski"
-    },
-    { "imie": "Ewa Fryc", "pozycja": "Sekretarz Finansowy" }
+    }
   ],
   "nauczyciele": [
     {
