@@ -6,6 +6,8 @@
     { "imie": "Ewelina Fila", "pozycja": "Rada Dyrektorów" },
     { "imie": "Katarzyna Brzuzan", "pozycja": "Rada Dyrektorów" },
     { "imie": "Mariusz Hacia", "pozycja": "Komisja Rewizyjna", "m": true },
+    { "imie": "Waldemar Plis", "pozycja": "Komisja Rewizyjna" },
+    { "imie": "Joanna Ogrodziński", "pozycja": "Komisja Rewizyjna" },
     {
       "imie": "Konrad Dudziak",
       "pozycja": "Komitet Rodzicielski",
