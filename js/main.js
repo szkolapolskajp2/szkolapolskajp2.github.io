@@ -1,6 +1,38 @@
 (function ($) {
   "use strict";
-  // $('#myModal').modal()
+
+  fetch("json/modals.json")
+    .then((r) => r.json())
+    .then((arr) => {
+      const modal = arr.filter(
+        (a) => new Date().getTime() < new Date(a.expire).getTime()
+      )[0];
+      if (modal) {
+        $("#myModal").append(`
+           <div class="modal-dialog" role="document" style="max-width: 800px;">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title">${modal.title}!</h5>
+                 <button
+                   type="button"
+                   class="close"
+                   data-dismiss="modal"
+                   aria-label="Close"
+                 >
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+                 </div>
+                 <div class="modal-body">
+                    <iframe style="width:100%;border:none;height:75vh;" src="${modal.url}" title="${modal.title}"></iframe>
+                  </div>
+               </div>
+             </div>
+           </div>
+          `);
+        $("#myModal").modal();
+      }
+    });
+
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -22,7 +54,7 @@
       <img  class="img-responsive dotacje" src="/img/dotacje/bon-dla-ucznia-2025.png"/>
       <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2025.jpg"/>
       <img  class="img-responsive dotacje" src="/img/dotacje/dotacja2023.png"/>
-`,
+`
     )
     .owlCarousel({
       center: true,
