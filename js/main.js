@@ -4,9 +4,12 @@
   fetch("json/modals.json")
     .then((r) => r.json())
     .then((arr) => {
-      const modal = arr.filter(
+      const modal = arr
+      .sort((a,b) => new Date(a.expire) - new Date(b.expire))
+      .filter(
         (a) => new Date().getTime() < new Date(a.expire).getTime()
       )[0];
+
       if (modal) {
         $("#myModal").append(`
            <div class="modal-dialog" role="document" style="max-width: 800px;">
@@ -23,7 +26,10 @@
                  </button>
                  </div>
                  <div class="modal-body">
-                    <iframe style="width:100%;border:none;height:75vh;" src="${modal.url}" title="${modal.title}"></iframe>
+                    ${modal.url[0] === '/'
+                      ? `<iframe style="width:100%;border:none;height:75vh;" src="${modal.url}" title="${modal.title}"></iframe>`
+                      : `<img style="width:100%;" src="${modal.url}"/>`
+                    }
                   </div>
                </div>
              </div>
